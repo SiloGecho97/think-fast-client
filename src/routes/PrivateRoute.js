@@ -1,5 +1,5 @@
 import React from 'react'
-import { Redirect, Route } from 'react-router-dom'
+import { Navigate, Route } from 'react-router-dom'
 import PropTypes from 'prop-types'
 
 const PrivateRoute = ({ component: Component, ...rest }) => (
@@ -9,10 +9,10 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
       localStorage.getItem('user') ? (
         <Component {...props} />
       ) : (
-        <Redirect
+        <Navigate
           to={{
             pathname: '/login',
-            state: { from: props.location }
+            state: { from: props.location },
           }}
         />
       )
@@ -22,7 +22,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
 
 PrivateRoute.propTypes = {
   component: PropTypes.any,
-  location: PropTypes.any
+  location: PropTypes.any,
 }
 
 export default PrivateRoute
