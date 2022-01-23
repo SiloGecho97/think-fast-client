@@ -1,7 +1,9 @@
 import React from 'react'
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import ForgotPassword from '../pages/ForgotPassword'
 import Home from '../pages/Home'
 import Login from '../pages/Login'
+import Signup from '../pages/Signup'
 import history from './history'
 // import PrivateRoute from './PrivateRoute'
 
@@ -12,6 +14,8 @@ const Router = () => {
           <Routes>
             <Route  path="/" element={<Home />} />
             <Route  path="/login" element={<Login />}/>
+            <Route  path="/signup" element={<Signup />}/>
+            <Route  path="/forgot" element={<ForgotPassword />}/>
             {/* <PrivateRoute path="/private_game" component={Game} /> */}
           </Routes>
         </BrowserRouter>
