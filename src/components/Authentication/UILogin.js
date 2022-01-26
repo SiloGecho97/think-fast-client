@@ -18,7 +18,7 @@ export const UILogin = () => {
 
   return (
     <div className="flex justify-between">
-      <div className="relative md:w-1/2 h-screen hidden md:flex flex-col justify-between p-8 bg-gradient-to-br from-purple-800 via-purple-900 to-indigo-900 text-white">
+      <div className="relative md:w-1/2 h-screen hidden md:flex flex-col justify-between p-8 bg-gradient-to-br from-primary via-secondary-900 to-accent text-white">
         <div>
           <header className="mx-2 my-4">
             <span className="text-lg text-purple-200 opacity-50">
@@ -35,12 +35,26 @@ export const UILogin = () => {
           </div>
         </div>
         <div className="flex text-2xl mx-4 my-4">
-          <img
-            className="h-6 w-auto sm:h-10 mr-2"
-            src="https://tailwindui.com/img/logos/workflow-mark-indigo-600.svg"
-            alt=""
-          />
-          <span>ThinkFast</span>
+          <svg
+            class="mr-3 h-10"
+            viewBox="0 0 52 72"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M1.87695 53H28.7791C41.5357 53 51.877 42.7025 51.877 30H24.9748C12.2182 30 1.87695 40.2975 1.87695 53Z"
+              fill="#76A9FA"
+            />
+            <path
+              d="M0.000409561 32.1646L0.000409561 66.4111C12.8618 66.4111 23.2881 55.9849 23.2881 43.1235L23.2881 8.87689C10.9966 8.98066 1.39567 19.5573 0.000409561 32.1646Z"
+              fill="#A4CAFE"
+            />
+            <path
+              d="M50.877 5H23.9748C11.2182 5 0.876953 15.2975 0.876953 28H27.7791C40.5357 28 50.877 17.7025 50.877 5Z"
+              fill="#1C64F2"
+            />
+          </svg>
+          <span className="text-white font-bold">ThinkFast</span>
         </div>
         <div className="h-24 w-40 absolute right-0 top-0 mt-10">
           <Dot4 className="w-72 h-40" />
@@ -62,7 +76,7 @@ export const UILogin = () => {
       <div className="w-full flex flex-col max-w-lg  mx-auto ">
         <div className="pt-16 px-16">
           <div className="text-2xl text-gray-700">
-            Welcome to <b className="text-purple-700">ThinkFast</b>
+            Welcome to <b className="text-primary">ThinkFast</b>
           </div>
           <div className="text-md text-gray-600 my-4 w-2/3">
             We make you to play and win games and quizzes and just easy and
@@ -107,7 +121,7 @@ export const UILogin = () => {
               </span>
             </div>
             <button
-              className="bg-purple-800 w-full text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
+              className="bg-primary w-full text-white active:bg-pink-600 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 mb-1 ease-linear transition-all duration-150"
               type="submit"
             >
               Login
@@ -116,12 +130,12 @@ export const UILogin = () => {
           <div className="flex flex-col items-center my-6">
             <h1>
               Don't you have account?
-              <a href="/signup" className="text-purple-700 mx-1">
+              <a href="/signup" className="text-primary mx-1">
                 {' '}
                 Signup
               </a>
             </h1>
-            <a href="/forgot" className="text-purple-700 mx-2">
+            <a href="/forgot" className="text-primary mx-2">
               Forgot password?
             </a>
           </div>
