@@ -35,7 +35,6 @@ const Header = () => {
               class="flex mr-3 text-sm bg-gray-100 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 "
               id="user-menu-button"
               aria-expanded="false"
-              type="button"
               data-dropdown-toggle="dropdown"
             >
               <span class="sr-only">Open user menu</span>
@@ -69,7 +68,7 @@ const Header = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/"
                     class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-500"
                   >
                     Settings
@@ -77,7 +76,7 @@ const Header = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/"
                     class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-500"
                   >
                     Earnings
@@ -85,7 +84,7 @@ const Header = () => {
                 </li>
                 <li>
                   <a
-                    href="#"
+                    href="/"
                     class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-500"
                   >
                     Sign out
