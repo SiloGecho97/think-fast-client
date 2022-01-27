@@ -7,9 +7,9 @@
     @apply my-2 px-3 py-3 placeholder-gray-300 text-gray-600 relative bg-white rounded text-sm border-0  shadow outline-none focus:outline-none focus:ring w-full;
   }
   .btn-primary {
-    @apply bg-purple-800 w-full
+    @apply bg-primary w-full
               text-white
-              active:bg-pink-600
+              active:bg-blue-600
               font-bold
               uppercase text-xs
               px-4 py-2
@@ -25,5 +25,12 @@
   }
   .btn-primary-large {
     @apply text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800;
+  }
+
+  .card {
+    @apply border shadow-md rounded-xl bg-white;
+  }
+  .choice {
+    @apply bg-gray-200 text-xl px-4 py-2 cursor-pointer hover:bg-primary hover:text-white rounded;
   }
 }

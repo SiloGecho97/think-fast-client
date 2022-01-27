@@ -6,6 +6,8 @@ import Home from '../pages/Home'
 import Login from '../pages/Login'
 import Signup from '../pages/Signup'
 import history from './history'
+import Intro from '../pages/Games/Intro'
+import Play from '../pages/Games/Play'
 // import PrivateRoute from './PrivateRoute'
 
 const Router = () => {
@@ -18,6 +20,8 @@ const Router = () => {
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot" element={<ForgotPassword />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/games" element={<Intro />} />
+          <Route path="/games/play" element={<Play />} />
         </Routes>
       </BrowserRouter>
     </div>

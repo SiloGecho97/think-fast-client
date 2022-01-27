@@ -18,7 +18,7 @@ export const UILogin = () => {
 
   return (
     <div className="flex justify-between">
-      <div className="relative md:w-1/2 h-screen hidden md:flex flex-col justify-between p-8 bg-gradient-to-br from-primary via-secondary-900 to-accent text-white">
+      <div className="relative md:w-1/2 h-screen hidden md:flex flex-col justify-between p-8 bg-gradient-to-br from-primary via-blue-900 to-indigo-900 text-white">
         <div>
           <header className="mx-2 my-4">
             <span className="text-lg text-purple-200 opacity-50">

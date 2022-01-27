@@ -1,11 +1,11 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 import Header from '../partials/Header'
 
 const Home = () => {
   return (
     <div>
       <Header />
-
       <section className="mx-20 mt-20 flex">
         <div className="w-1/2 p-8">
           <h2 className="font-bold text-primary text-6xl">Play Quiz</h2>
@@ -23,7 +23,9 @@ const Home = () => {
             eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
             ad minim veniam, quis nostrud exercitation ullamco
           </p>
-          <button className="btn-primary-large my-8 w-auto ">Play</button>
+          <Link to="/games" className="btn-primary-large my-8 w-auto ">
+            Play
+          </Link>
         </div>
       </section>
     </div>
