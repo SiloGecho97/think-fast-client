@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Index = () => {
   return (
-    <div className="h-screen flex flex-col items-center justify-center bg-gray-100">
+    <div className="h-screen flex flex-col items-center justify-center bg-gray-100 max-w-screen-2xl">
       <svg
         class="mr-3 h-40"
         viewBox="0 0 52 72"

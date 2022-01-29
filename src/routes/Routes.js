@@ -8,6 +8,8 @@ import Signup from '../pages/Signup'
 import history from './history'
 import Intro from '../pages/Games/Intro'
 import Play from '../pages/Games/Play'
+import Categroy from '../pages/Games/Categroy'
+import Congratulations from '../pages/Games/Congratulations'
 // import PrivateRoute from './PrivateRoute'
 
 const Router = () => {
@@ -21,7 +23,9 @@ const Router = () => {
           <Route path="/forgot" element={<ForgotPassword />} />
           <Route path="/home" element={<Home />} />
           <Route path="/games" element={<Intro />} />
+          <Route path="/games/category" element={<Categroy />} />
           <Route path="/games/play" element={<Play />} />
+          <Route path="/games/finish" element={<Congratulations />} />
         </Routes>
       </BrowserRouter>
     </div>
