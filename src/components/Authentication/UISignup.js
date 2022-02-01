@@ -18,7 +18,7 @@ export const UISingup = () => {
 
   return (
     <div className="flex justify-between">
-      <div className="relative md:w-1/2 h-screen hidden md:flex flex-col justify-between p-8 bg-gradient-to-br from-primary via-blue-900 to-indigo-900 text-white">
+      <div className="relative md:w-1/2 h-auto hidden md:flex flex-col justify-between p-8 bg-gradient-to-br from-primary via-blue-900 to-indigo-900 text-white">
         <div>
           <header className="mx-2 my-4">
             <span className="text-lg text-purple-200 opacity-50">
@@ -111,6 +111,31 @@ export const UISingup = () => {
               />
               <span className="text-red-600">
                 {errors.phoneNumber && <p>PhoneNumber is required.</p>}
+              </span>
+            </div>
+
+            <div className="mb-3 pt-0">
+              <span className="">Current City</span>
+              <input
+                {...register('city', { required: true })}
+                type="text"
+                placeholder="Addis Ababa"
+                className="text-field"
+              />
+              <span className="text-red-600">
+                {errors.city && <p>City is required.</p>}
+              </span>
+            </div>
+            <div className="mb-3 pt-0">
+              <span className="">Age</span>
+              <input
+                {...register('age')}
+                type="text"
+                placeholder="Age"
+                className="text-field"
+              />
+              <span className="text-red-600">
+                {errors.age && <p>Age is required.</p>}
               </span>
             </div>
 
