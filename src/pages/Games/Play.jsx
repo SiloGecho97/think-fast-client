@@ -98,12 +98,14 @@ const infoQuestions = [
   },
 ]
 
-const Play = (props) => {
+const Play = () => {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0)
   const [question, setQuestion] = useState(basic_questions)
+  const [selected, setSelected] = useState(null)
+
   const nextQuestions = () => {
-    console.log(current)
+    setSelected(null)
     setCurrent(current + 1)
     if (current === 4) {
       navigate('/games/finish')
@@ -128,7 +130,15 @@ const Play = (props) => {
           </p>
           <ul className="m-6 max-w-lg">
             {question[current].choices.map((choice, index) => (
-              <li key={index} className="choice my-3">
+              <li
+                onClick={(e) => setSelected(index)}
+                key={index}
+                className={` ${
+                  selected !== index
+                    ? 'bg-gray-200 rounded-full px-10 p-4 m-4 text-primary hover:bg-primary hover:text-white hover:shadow-xl cursor-pointer'
+                    : 'rounded-full px-10 p-4 m-4 hover:text-white bg-primary hover:bg-primary text-white hover:shadow-xl cursor-pointer'
+                }`}
+              >
                 {choice}
               </li>
             ))}
