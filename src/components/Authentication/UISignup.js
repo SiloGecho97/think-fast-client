@@ -182,13 +182,13 @@ export const UISingup = () => {
             </button>
           </form>
           <div className="flex flex-col items-center my-6">
-            <h1>
+            <p>
               Already have account?
               <a href="/login" className="text-purple-700 mx-1">
                 {' '}
                 Login
               </a>
-            </h1>
+            </p>
           </div>
         </div>
       </div>

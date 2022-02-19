@@ -128,13 +128,13 @@ export const UILogin = () => {
             </button>
           </form>
           <div className="flex flex-col items-center my-6">
-            <h1>
+            <p>
               Don't you have account?
               <a href="/signup" className="text-primary mx-1">
                 {' '}
                 Signup
               </a>
-            </h1>
+            </p>
             <a href="/forgot" className="text-primary mx-2">
               Forgot password?
             </a>

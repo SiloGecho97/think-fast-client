@@ -17,11 +17,12 @@ module.exports = {
       blue: colors.blue,
       purple: colors.purple,
       pink: colors.pink,
+      sky: colors.sky,
       primary: '#29348E',
       secondary: '#545DAA',
       accent: '#618CFB',
     },
     extend: {},
   },
-  plugins: [],
+  plugins: [require('daisyui')],
 }

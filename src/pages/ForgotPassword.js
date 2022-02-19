@@ -25,13 +25,13 @@ const ForgotPassword = () => {
           Send
         </button>
         <div class="flex flex-col items-center my-6">
-          <h1>
+          <p>
             Don't recieve the code?
             <a href="/signup" class="text-purple-700 mx-1">
               {' '}
               Resend
             </a>
-          </h1>
+          </p>
         </div>
       </div>
     </div>
