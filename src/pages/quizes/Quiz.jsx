@@ -1,4 +1,5 @@
 import React from 'react'
+import Leadboard from '../../components/quiz/Leadboard'
 import Header from '../../partials/Header'
 
 const Quiz = () => {
@@ -78,20 +79,25 @@ const Quiz = () => {
           </div>
         </div>
       </>
-      <div>
-        <label for="my-modal" class="btn modal-button">
-          open modal
+     
+
+      <section>
+        <Leadboard/>
+      </section>
+
+      <section className='mx-auto w-full flex justify-center'>
+        <label for="my-modal" class="btn-primary text-3xl py-4 px-8 w-max">
+          Start Quiz
         </label>
 
         <input type="checkbox" id="my-modal" class="modal-toggle" />
         <div class="modal">
           <div class="modal-box">
             <h3 class="font-bold text-lg">
-              Congratulations random Interner user!
+             After you start quiz you should finish 
             </h3>
             <p class="py-4">
-              You've been selected for a chance to get one year of subscription
-              to use Wikipedia for free!
+             When you start quiz you should finish quiz inorder to win price
             </p>
             <div class="modal-action">
               <label for="my-modal" class="btn">
@@ -100,7 +106,7 @@ const Quiz = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   )
 }

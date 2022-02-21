@@ -27,7 +27,6 @@ const fetchLeadboards = [
 const Leadboard = () => {
   return (
     <div>
-      <Header />
       <div className="max-w-3xl mx-auto my-12">
         <p className="text-gray-700 text-center text-2xl my-8 ">
           Daily Top 3 will be awarded.
