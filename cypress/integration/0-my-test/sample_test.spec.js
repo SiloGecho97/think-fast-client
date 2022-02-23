@@ -4,4 +4,4 @@ describe('My First Test', () => {
   
       cy.contains('type')
     })
-  })
+  });

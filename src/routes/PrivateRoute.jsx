@@ -6,7 +6,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
   <Route
     {...rest}
     render={(props) =>
-      localStorage.getItem('user') ? (
+      (localStorage.getItem('user') ? (
         <Component {...props} />
       ) : (
         <Navigate
@@ -15,7 +15,7 @@ const PrivateRoute = ({ component: Component, ...rest }) => (
             state: { from: props.location },
           }}
         />
-      )
+      ))
     }
   />
 )
