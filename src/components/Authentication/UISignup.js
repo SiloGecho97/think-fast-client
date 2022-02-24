@@ -36,7 +36,7 @@ export const UISingup = () => {
         </div>
         <div className="flex text-2xl mx-4 my-4">
           <svg
-            class="mr-3 h-10"
+            className="mr-3 h-10"
             viewBox="0 0 52 72"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"
@@ -174,7 +174,7 @@ export const UISingup = () => {
               "
               />
               <span className="mx-2 text-base text-gray-700">
-                Agree to the terms and policies
+               <a href='/privacy'>Agree to the terms and policies </a> 
               </span>
             </div>
             <button className="btn-primary" type="submit">

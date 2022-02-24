@@ -36,7 +36,7 @@ export const UILogin = () => {
         </div>
         <div className="flex text-2xl mx-4 my-4">
           <svg
-            class="mr-3 h-10"
+            className="mr-3 h-10"
             viewBox="0 0 52 72"
             fill="none"
             xmlns="http://www.w3.org/2000/svg"

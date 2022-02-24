@@ -3,11 +3,11 @@ import React from 'react'
 const Header = () => {
   return (
     <div>
-      <nav class="bg-white px-2 sm:px-4 py-4 rounded border-b border-gray-50 shadow">
-        <div class="container flex flex-wrap justify-between items-center mx-auto">
-          <a href="/" class="flex">
+      <nav className="bg-white px-2 sm:px-4 py-4 rounded border-b border-gray-50 shadow">
+        <div className="container flex flex-wrap justify-between items-center mx-auto">
+          <a href="/" className="flex">
             <svg
-              class="mr-3 h-10"
+              className="mr-3 h-10"
               viewBox="0 0 52 72"
               fill="none"
               xmlns="http://www.w3.org/2000/svg"
@@ -25,43 +25,43 @@ const Header = () => {
                 fill="#1C64F2"
               />
             </svg>
-            <span class="self-center text-xl font-bold whitespace-nowrap text-primary">
+            <span className="self-center text-xl font-bold whitespace-nowrap text-primary">
               ThinkFast
             </span>
           </a>
-          <div class="flex items-center md:order-2">
+          <div className="flex items-center md:order-2">
             <button
               type="button"
-              class="flex mr-3 text-sm bg-gray-100 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 "
+              className="flex mr-3 text-sm bg-gray-100 rounded-full md:mr-0 focus:ring-4 focus:ring-gray-300 "
               id="user-menu-button"
               aria-expanded="false"
               data-dropdown-toggle="dropdown"
             >
-              <span class="sr-only">Open user menu</span>
+              <span className="sr-only">Open user menu</span>
               <img
-                class="w-8 h-8 rounded-full"
+                className="w-8 h-8 rounded-full"
                 src="https://image.shutterstock.com/image-vector/default-avatar-profile-trendy-style-260nw-1759726295.jpg"
                 alt="user "
               />
             </button>
 
             <div
-              class="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow"
+              className="hidden z-50 my-4 text-base list-none bg-white rounded divide-y divide-gray-100 shadow"
               id="dropdown"
             >
-              <div class="py-3 px-4">
-                <span class="block text-sm text-gray-900 dark:text-white">
+              <div className="py-3 px-4">
+                <span className="block text-sm text-gray-900 dark:text-white">
                   Bonnie Green
                 </span>
-                <span class="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">
+                <span className="block text-sm font-medium text-gray-500 truncate dark:text-gray-400">
                   name@flowbite.com
                 </span>
               </div>
-              <ul class="py-1" aria-labelledby="dropdown">
+              <ul className="py-1" aria-labelledby="dropdown">
                 <li>
                   <a
                     href="/"
-                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-500 "
+                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-500 "
                   >
                     Dashboard
                   </a>
@@ -69,7 +69,7 @@ const Header = () => {
                 <li>
                   <a
                     href="/"
-                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-500"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-500"
                   >
                     Settings
                   </a>
@@ -77,7 +77,7 @@ const Header = () => {
                 <li>
                   <a
                     href="/"
-                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-500"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-500"
                   >
                     Earnings
                   </a>
@@ -85,7 +85,7 @@ const Header = () => {
                 <li>
                   <a
                     href="/"
-                    class="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-500"
+                    className="block py-2 px-4 text-sm text-gray-700 hover:bg-gray-500"
                   >
                     Sign out
                   </a>
@@ -95,13 +95,13 @@ const Header = () => {
             <button
               data-collapse-toggle="mobile-menu-2"
               type="button"
-              class="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
+              className="inline-flex items-center p-2 ml-1 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 "
               aria-controls="mobile-menu-2"
               aria-expanded="false"
             >
-              <span class="sr-only">Open main menu</span>
+              <span className="sr-only">Open main menu</span>
               <svg
-                class="w-6 h-6"
+                className="w-6 h-6"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"
@@ -113,7 +113,7 @@ const Header = () => {
                 ></path>
               </svg>
               <svg
-                class="hidden w-6 h-6"
+                className="hidden w-6 h-6"
                 fill="currentColor"
                 viewBox="0 0 20 20"
                 xmlns="http://www.w3.org/2000/svg"

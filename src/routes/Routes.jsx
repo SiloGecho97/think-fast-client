@@ -11,6 +11,7 @@ import Play from '../pages/Games/Play'
 import Categroy from '../pages/Games/Categroy'
 import Congratulations from '../pages/Games/Congratulations'
 import Quiz from '../pages/quizes/Quiz'
+import Privacy from '../pages/Privacy'
 // import PrivateRoute from './PrivateRoute'
 
 const Router = () => {
@@ -19,6 +20,7 @@ const Router = () => {
       <BrowserRouter history={history}>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/privacy" element={<Privacy />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot" element={<ForgotPassword />} />
