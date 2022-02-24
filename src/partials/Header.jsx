@@ -23,16 +23,25 @@ function Header() {
           <div className="flex-shrink-0 mr-4">
             {/* Logo */}
             <Link to="/" className="block" aria-label="Cruip">
-              <svg className="w-8 h-8" viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
-                <defs>
-                  <radialGradient cx="21.152%" cy="86.063%" fx="21.152%" fy="86.063%" r="79.941%" id="header-logo">
-                    <stop stopColor="#4FD1C5" offset="0%" />
-                    <stop stopColor="#81E6D9" offset="25.871%" />
-                    <stop stopColor="#338CF5" offset="100%" />
-                  </radialGradient>
-                </defs>
-                <rect width="32" height="32" rx="16" fill="url(#header-logo)" fillRule="nonzero" />
-              </svg>
+            <svg
+              className="mr-3 h-10"
+              viewBox="0 0 52 72"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M1.87695 53H28.7791C41.5357 53 51.877 42.7025 51.877 30H24.9748C12.2182 30 1.87695 40.2975 1.87695 53Z"
+                fill="#76A9FA"
+              />
+              <path
+                d="M0.000409561 32.1646L0.000409561 66.4111C12.8618 66.4111 23.2881 55.9849 23.2881 43.1235L23.2881 8.87689C10.9966 8.98066 1.39567 19.5573 0.000409561 32.1646Z"
+                fill="#A4CAFE"
+              />
+              <path
+                d="M50.877 5H23.9748C11.2182 5 0.876953 15.2975 0.876953 28H27.7791C40.5357 28 50.877 17.7025 50.877 5Z"
+                fill="#1C64F2"
+              />
+            </svg>
             </Link>
           </div>
 
@@ -40,7 +49,7 @@ function Header() {
           <nav className="flex flex-grow">
             <ul className="flex flex-grow justify-end flex-wrap items-center">
               <li>
-                <Link to="/signin" className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out">Sign in</Link>
+                <Link to="/login" className="font-medium text-gray-600 hover:text-gray-900 px-5 py-3 flex items-center transition duration-150 ease-in-out dark:bg-gray-100">Sign in</Link>
               </li>
               <li>
                 <Link to="/signup" className="btn-sm text-gray-200 bg-gray-900 hover:bg-gray-800 ml-3">
