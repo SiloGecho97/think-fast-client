@@ -15,6 +15,7 @@ import Quiz from '../pages/quizes/Quiz'
 import Privacy from '../pages/Privacy'
 import TrialPlay from '../pages/trial/TrialPlay'
 import FinishTrial from '../pages/trial/FinishTrial'
+import VerifyPhone from '../pages/VerifyPhone'
 // import PrivateRoute from './PrivateRoute'
 
 const Router = () => {
@@ -27,6 +28,7 @@ const Router = () => {
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/forgot" element={<ForgotPassword />} />
+          <Route path="/verify" element={<VerifyPhone />} />
           <Route path="/home" element={<Home />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/quiz/play" element={<Play />} />

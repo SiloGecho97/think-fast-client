@@ -7,17 +7,96 @@ const FinishTrial = () => {
   return (
     <>
       <Header />
-      <div className=" flex flex-col items-center justify-center">
-        <h1 className="text-8xl font-bold">Congratulations</h1>
-        <p className="text-3xl text-blue-100">
-          You Answer <b className="text-5xl font-black text-yellow-600">3</b>{' '}
-          points
-        </p>
-        <Link to="/games" className="my-4">
-          <Button variant="secondary" pill={true} size="extra">
-            Next Round
-          </Button>
-        </Link>
+      <div class="hero min-h-[40rem] bg-base-100">
+        <div class="flex flex-col">
+          <h1 class="text-4xl font-bold max-w-2xl">
+            Successfully Complete Practice game
+          </h1>
+          <div class="max-w-md">
+            <p class="py-6">
+              Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
+              excepturi exercitationem quasi. In deleniti eaque aut repudiandae
+              et a id nisi.
+            </p>
+            <div className='flex text-start my-4'>
+              <ul className="space-y-12 text-start">
+                <li className="flex -mx-4">
+                  <div className="px-4">
+                    <span className="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold font-heading rounded-full bg-blue-50 text-blue-600">
+                      1
+                    </span>
+                  </div>
+                  <div className="px-4">
+                    <h3 className="my-4 text-xl font-semibold dark:text-white">
+                      Verify your Phone Number
+                    </h3>
+                    <p className="text-gray-500 dark:text-gray-300 leading-loose">
+                      Your phone number will registered
+                    </p>
+                  </div>
+                </li>
+                <li className="flex -mx-4">
+                  <div className="px-4">
+                    <span className="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold font-heading rounded-full bg-blue-50 text-blue-600">
+                      2
+                    </span>
+                  </div>
+                  <div className="px-4">
+                    <h3 className="my-4 text-xl font-semibold dark:text-white">
+                      Monthly Recharge
+                    </h3>
+                    <p className="text-gray-500 dark:text-gray-300 leading-loose">
+                      Monthly 30 birr will be deduce from your phone number
+                    </p>
+                  </div>
+                </li>
+                <li className="flex -mx-4">
+                  <div className="px-4">
+                    <span className="flex w-16 h-16 mx-auto items-center justify-center text-2xl font-bold font-heading rounded-full bg-blue-50 text-blue-600">
+                      3
+                    </span>
+                  </div>
+                  <div className="px-4">
+                    <h3 className="my-4 text-xl font-semibold dark:text-white">
+                      Unlimitted access to Application
+                    </h3>
+                    <p className="text-gray-500 dark:text-gray-300 leading-loose">
+                      Lorem ipsum dolor sit amet, consectetur adipiscing elit,
+                      sed do eiusmod tempor incididunt ut labore et dolore magna
+                      aliqua.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div className="mb-3 pt-0">
+              <input
+                type="checkbox"
+                className="
+                my-2
+                px-3
+                py-3
+                placeholder-purpleGray-300
+                text-purpleGray-600
+                relative
+                bg-white
+                rounded
+                text-sm
+                border-0
+                shadow
+                outline-none
+                focus:outline-none focus:ring
+              "
+              />
+              <span className="mx-2 text-base text-gray-700">
+               <span>I read above listed points and Agree to terms </span> 
+              </span>
+            </div>
+            <Link to="/verify" class="btn btn-primary">
+              Continue
+            </Link>
+          </div>
+        </div>
       </div>
     </>
   )

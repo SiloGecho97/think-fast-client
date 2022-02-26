@@ -82,20 +82,7 @@ const TrialPlay = () => {
   return (
     <div className="bg-gray-50 pb-40">
       <Header />
-      <div class="mt-20 mx-auto flex w-full justify-center">
-        <ul class="steps">
-          <li class={`step ${current>0 && 'step-primary'}`}>start</li>
-          <li class={`step ${current>1 && 'step-primary'}`}>2</li>
-          <li class={`step ${current>2 && 'step-primary'}`}>3</li>
-          <li class={`step ${current>3 && 'step-primary'}`}>4</li>
-          <li class={`step ${current>4 && 'step-primary'}`}>5</li>
-          <li class={`step ${current>5 && 'step-primary'}`}>6</li>
-          <li class={`step ${current>6 && 'step-primary'}`}>7</li>
-          <li class={`step ${current>7 && 'step-primary'}`}>8</li>
-          <li class={`step ${current>8 && 'step-primary'}`}>9</li>
-          <li class={`step ${current>9 && 'step-primary'}`}>10</li>
-        </ul>
-      </div>
+
       <label for="my-modal" ref={modalRef} class="btn modal-button hidden">
         open modal
       </label>
@@ -115,32 +102,47 @@ const TrialPlay = () => {
         </div>
       </div>
 
-      <div className="px-16 flex justify-end ">
+      <div class="mt-20 mx-auto flex w-full justify-center">
+        <ul class="steps">
+          <li class={`step ${current>0 && 'step-primary'}`}>start</li>
+          <li class={`step ${current>1 && 'step-primary'}`}>2</li>
+          <li class={`step ${current>2 && 'step-primary'}`}>3</li>
+          <li class={`step ${current>3 && 'step-primary'}`}>4</li>
+          <li class={`step ${current>4 && 'step-primary'}`}>5</li>
+          <li class={`step ${current>5 && 'step-primary'}`}>6</li>
+          <li class={`step ${current>6 && 'step-primary'}`}>7</li>
+          <li class={`step ${current>7 && 'step-primary'}`}>8</li>
+          <li class={`step ${current>8 && 'step-primary'}`}>9</li>
+          <li class={`step ${current>9 && 'step-primary'}`}>10</li>
+        </ul>
+      </div>
+      <div className="px-16 -mt-8 flex justify-end ">
+      
         <Timer />
       </div>
       <div className="mx-auto w-full flex flex-col items-center my-0">
        
-        <div className="card max-w-2xl w-full p-16">
+        <div className="card max-w-4xl w-full p-16">
           <p className="text-3xl font-bold text-center">
             {question[current].question}
           </p>
-          <ul className="m-6 max-w-lg">
+          <ul className="m-6 max-w-lg mx-auto w-full">
             {question[current].choices.map((choice, index) => (
               <li
                 onClick={(e) => setSelected(index)}
                 key={index}
                 className={` ${
                   selected !== index
-                    ? 'bg-gray-200 rounded-full px-10 p-4 m-4 text-primary hover:bg-primary hover:text-white hover:shadow-xl cursor-pointer'
-                    : 'rounded-full px-10 p-4 m-4 hover:text-white bg-primary hover:bg-primary text-white hover:shadow-xl cursor-pointer'
+                    ? 'bg-gray-200 rounded-full px-10 p-3 m-4 text-primary hover:bg-primary hover:text-white hover:shadow-xl cursor-pointer'
+                    : 'rounded-full px-10 p-3 m-4 hover:text-white bg-primary hover:bg-primary text-white hover:shadow-xl cursor-pointer'
                 }`}
               >
                 {choice}
               </li>
             ))}
           </ul>
-          <div onClick={(e) => nextQuestions()} className="float-right">
-            <button className="btn-primary mt-8 text-xl">Next Question</button>
+          <div onClick={(e) => nextQuestions()} className="float-right mx-auto">
+            <button className="btn-primary mt-8 text-xl w-max mx-auto">Next Question</button>
           </div>
         </div>
       </div>
