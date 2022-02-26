@@ -2,7 +2,6 @@ import React from 'react'
 import HeroHome from '../partials/HeroHome'
 import FeaturesHome from '../partials/Features'
 import FeaturesBlocks from '../partials/FeaturesBlocks'
-import Newsletter from '../partials/Newsletter'
 import Footer from '../partials/Footer'
 import LandingHeader from '../partials/LandingHeader'
 const Index = () => {
