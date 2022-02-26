@@ -8,10 +8,13 @@ import Signup from '../pages/Signup'
 import history from './history'
 import Intro from '../pages/Games/Intro'
 import Play from '../pages/Games/Play'
+
 import Categroy from '../pages/Games/Categroy'
 import Congratulations from '../pages/Games/Congratulations'
 import Quiz from '../pages/quizes/Quiz'
 import Privacy from '../pages/Privacy'
+import TrialPlay from '../pages/trial/TrialPlay'
+import FinishTrial from '../pages/trial/FinishTrial'
 // import PrivateRoute from './PrivateRoute'
 
 const Router = () => {
@@ -31,6 +34,8 @@ const Router = () => {
           <Route path="/games/category" element={<Categroy />} />
           <Route path="/games/play" element={<Play />} />
           <Route path="/games/finish" element={<Congratulations />} />
+          <Route path="/trial/play" element={<TrialPlay />} />
+          <Route path="/trial/finish" element={<FinishTrial />} />
         </Routes>
       </BrowserRouter>
     </div>
