@@ -3,6 +3,10 @@ module.exports = {
   content: ['./src/**/*.{js,jsx,ts,tsx}'],
   darkMode: false,
   theme: {
+    fontFamily: {
+      sora: "'Sora'",
+      inter: "'Inter', sans-serif;",
+    },
     colors: {
       light_gray_faq_block: '#F1F1F1',
       gray_faq_block: '#FAFAFA',

@@ -26,29 +26,25 @@ const fetchLeadboards = [
 ]
 const Leadboard = () => {
   return (
-    <div>
-      <div className="max-w-3xl mx-auto my-12">
-        <p className="text-gray-700 text-center text-2xl my-8 ">
-          Daily Top 3 will be awarded.
-        </p>
+    <div className="max-w-lg my-12 w-full">
+      <h3 className="text-gray-800 font-bold my-8 ">This Week Champions</h3>
 
-        <div className="flex justify-between items-baseline pr-6">
-          <h4 className="font-bold">Leadboard</h4>
-          <h5 className="">Score</h5>
-        </div>
-        {fetchLeadboards.map((item, index) => (
-          <div
-            className={classNames(
-              `flex justify-between max-w-3xl  shadow rounded-xl px-5 py-4 my-6 text-2xl ${
-                index < 3 ? 'bg-sky-900 text-white' : 'bg-gray-100 text-sky-900'
-              }`
-            )}
-          >
-            <span>{item.name}</span>
-            <span className="text-3xl font-black">{item.score}</span>
-          </div>
-        ))}
+      <div className="flex justify-between items-baseline pr-6">
+        <h5 className="font-bold">Leadboard</h5>
+        <h6 className="">Score</h6>
       </div>
+      {fetchLeadboards.map((item, index) => (
+        <div
+          className={classNames(
+            `flex justify-between max-w-lg  shadow rounded-lg px-5 py-1 my-4 text-lg ${
+              index < 3 ? 'bg-indigo-800 text-white' : 'bg-white text-sky-900'
+            }`
+          )}
+        >
+          <span>{item.name}</span>
+          <span className="text-2xl font-black">{item.score}</span>
+        </div>
+      ))}
     </div>
   )
 }

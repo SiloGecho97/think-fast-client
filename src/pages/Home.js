@@ -7,6 +7,7 @@ import {
   FaSortNumericDown,
   FaSortNumericUp,
 } from 'react-icons/fa'
+import Leadboard from '../components/quiz/Leadboard'
 const Home = () => {
   return (
     <div className="flex bg-gray-50">
@@ -65,6 +66,11 @@ const Home = () => {
               Play
             </Link>
           </div>
+        </section>
+        {/* this week champions */}
+        <section className="bg-gray-50 flex w-full mx-8">
+          <Leadboard />
+          <div>Play</div>
         </section>
       </div>
       <div className="w-1/5 bg-gray-100 h-auto p-5 ">

@@ -7,9 +7,9 @@
     @apply my-2 px-3 py-3 placeholder-gray-300 text-gray-600 relative bg-white rounded text-sm border-0  shadow outline-none focus:outline-none focus:ring w-full;
   }
   .btn-primary {
-    @apply bg-primary w-full
+    @apply bg-gray-900 w-full
               text-white
-              active:bg-blue-600
+              active:bg-gray-600
               font-bold
               uppercase text-xs
               px-4 py-2
@@ -24,7 +24,7 @@
               duration-150;
   }
   .btn-primary-large {
-    @apply text-white bg-primary hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-base px-6 py-3.5 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800;
+    @apply text-white font-bold bg-gray-900 p-[20px] hover:bg-gray-700 ease-out transition-all duration-150 rounded-2xl text-xl  text-center dark:bg-gray-500 dark:hover:bg-gray-600;
   }
 
   .card {
@@ -40,19 +40,19 @@
   }
 
   h1 {
-    @apply text-4xl md:text-7xl font-bold;
+    @apply text-4xl md:text-7xl font-bold font-sora;
   }
 
   h2 {
-    @apply text-3xl md:text-6xl;
+    @apply text-3xl md:text-6xl font-sora;
   }
 
   h3 {
-    @apply text-2xl md:text-5xl;
+    @apply text-2xl md:text-5xl font-sora;
   }
 
   h4 {
-    @apply text-xl md:text-4xl;
+    @apply text-xl md:text-4xl font-sora;
   }
 
   h5 {
