@@ -40,10 +40,29 @@ const Home = () => {
           </div>
         </section>
 
-        <section className="mx-4 md:mx-20 mt-20 flex md:flex-row flex-col  max-w-screen-2xl">
+        <section className="my-8 px-8 flex md:flex-row flex-col max-w-screen-2xl bg-indigo-900">
+          <div className="bg-gray- rounded-3xl w-full h-80 p-8">
+            <h2 className="font-bold text-white text-6xl">Play Game</h2>
+            <p className="my-3 max-w-md text-gray-200">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud exercitation ullamco
+            </p>
+            <Link to="/games" className="btn btn-outline btn-info ">
+              Play
+            </Link>
+          </div>
+        </section>
+        {/* this week champions */}
+        <section className="bg-gray-50 flex items-baseline w-full mx-8 px-8">
+          <Leadboard />
           <div className="w-full p-8">
-            <h2 className="font-bold text-primary text-6xl">Play Quiz</h2>
-            <p className="my-3 max-w-md text-gray-700">
+            <h3 className="leading-[120%]">
+              Continue Play{' '}
+              <span className="text-indigo-600 font-extrabold">Champions</span>{' '}
+              Quiz
+            </h3>
+            <p className="my-3 max-w-md text-gray-900">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
               eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
               enim ad minim veniam, quis nostrud exercitation ullamco
@@ -52,25 +71,6 @@ const Home = () => {
               Get Start
             </Link>
           </div>
-          <div className="bg-primary rounded-3xl w-full h-80 p-8">
-            <h2 className="font-bold text-white text-6xl">Play Game</h2>
-            <p className="my-3 max-w-md text-gray-200">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco
-            </p>
-            <Link
-              to="/games"
-              className="btn-primary-large bg-blue-600 my-8 w-max block "
-            >
-              Play
-            </Link>
-          </div>
-        </section>
-        {/* this week champions */}
-        <section className="bg-gray-50 flex w-full mx-8">
-          <Leadboard />
-          <div>Play</div>
         </section>
       </div>
       <div className="w-1/5 bg-gray-100 h-auto p-5 ">

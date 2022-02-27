@@ -26,17 +26,23 @@ const fetchLeadboards = [
 ]
 const Leadboard = () => {
   return (
-    <div className="max-w-lg my-12 w-full">
-      <h3 className="text-gray-800 font-bold my-8 ">This Week Champions</h3>
-
-      <div className="flex justify-between items-baseline pr-6">
+    <div className="max-w-xl my-12 w-full">
+      <h4 className="text-gray-800  mt-8 mb-4 -ml-1 ">
+        This Week
+        <span className="font-extrabold text-indigo-700"> Champions</span>
+      </h4>
+      <p className="mb-8 text-lg text-black">
+        Only Top 3 of this week will be awarded, answer the question improve you
+        current score and leadboard
+      </p>
+      <div className="max-w-[480px] flex justify-between items-baseline pr-6">
         <h5 className="font-bold">Leadboard</h5>
         <h6 className="">Score</h6>
       </div>
       {fetchLeadboards.map((item, index) => (
         <div
           className={classNames(
-            `flex justify-between max-w-lg  shadow rounded-lg px-5 py-1 my-4 text-lg ${
+            `flex justify-between max-w-[480px]  shadow rounded-lg px-5 py-1 my-4 text-lg ${
               index < 3 ? 'bg-indigo-800 text-white' : 'bg-white text-sky-900'
             }`
           )}
