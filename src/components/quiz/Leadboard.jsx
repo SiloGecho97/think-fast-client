@@ -27,7 +27,7 @@ const fetchLeadboards = [
 const Leadboard = () => {
   return (
     <div className="max-w-xl my-12 w-full">
-      <h4 className="text-gray-800  mt-8 mb-4 -ml-1 ">
+      <h4 className="text-gray-800 font-bold font-sora  mt-8 mb-4 -ml-1 ">
         This Week
         <span className="font-extrabold text-indigo-700"> Champions</span>
       </h4>
