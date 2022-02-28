@@ -174,10 +174,10 @@ export const UISingup = () => {
               "
               />
               <span className="mx-2 text-base text-gray-700">
-               <a href='/privacy'>Agree to the terms and policies </a> 
+                <a href="/privacy">Agree to the terms and policies </a>
               </span>
             </div>
-            <button className="btn-primary" type="submit">
+            <button className="btn btn-primary" type="submit">
               Sign up
             </button>
           </form>

@@ -144,7 +144,9 @@ const Play = () => {
             ))}
           </ul>
           <div onClick={(e) => nextQuestions()} className="float-right">
-            <button className="btn-primary mt-8 text-xl">Next Question</button>
+            <button className="btn btn-accent btn-wide mt-8 text-xl">
+              Next Question
+            </button>
           </div>
         </div>
       </div>
