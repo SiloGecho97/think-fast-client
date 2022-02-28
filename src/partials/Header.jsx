@@ -25,7 +25,7 @@ const Header = () => {
                 fill="#1C64F2"
               />
             </svg>
-            <span className="self-center text-xl font-bold whitespace-nowrap text-primary">
+            <span className="self-center text-xl font-bold whitespace-nowrap text-indigo-900">
               ThinkFast
             </span>
           </a>

@@ -6,7 +6,7 @@
   .text-field {
     @apply my-2 px-3 py-3 placeholder-gray-300 text-gray-600 relative bg-white rounded text-sm border-0  shadow outline-none focus:outline-none focus:ring w-full;
   }
-  .btn-primary {
+  .btn-primary-custom {
     @apply bg-gray-900 w-full
               text-white
               active:bg-gray-600
