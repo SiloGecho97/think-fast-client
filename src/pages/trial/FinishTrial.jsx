@@ -6,9 +6,9 @@ const FinishTrial = () => {
   return (
     <>
       <Header />
-      <div class="hero min-h-[40rem] bg-base-100">
+      <div class="hero min-h-[40rem] bg-base-100 my-16">
         <div class="flex flex-col">
-          <h1 class="text-4xl font-bold max-w-2xl">
+          <h1 class="text-3xl font-bold max-w-2xl">
             Successfully Complete Practice game
           </h1>
           <div class="max-w-md">
@@ -17,7 +17,7 @@ const FinishTrial = () => {
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
             </p>
-            <div className='flex text-start my-4'>
+            <div className="flex text-start my-4">
               <ul className="space-y-12 text-start">
                 <li className="flex -mx-4">
                   <div className="px-4">
@@ -88,7 +88,7 @@ const FinishTrial = () => {
               "
               />
               <span className="mx-2 text-base text-gray-700">
-               <span>I read above listed points and Agree to terms </span> 
+                <span>I read above listed points and Agree to terms </span>
               </span>
             </div>
             <Link to="/verify" class="btn btn-primary">

@@ -1,10 +1,16 @@
 import React from 'react'
 import { FaMoneyCheck } from 'react-icons/fa'
+import { useNavigate } from 'react-router-dom'
 import Card from '../../components/Global/Card'
 import Leadboard from '../../components/quiz/Leadboard'
 import Header from '../../partials/Header'
 
 const Quiz = () => {
+  const navigate = useNavigate()
+
+  const playChampions = () => {
+    navigate('/quiz/play')
+  }
   return (
     <>
       <Header />
@@ -90,7 +96,7 @@ const Quiz = () => {
         </div>
       </div>
 
-      <section className="mx-auto w-full flex justify-center mt-16">
+      <section className="mx-auto w-full flex justify-center my-16">
         <label for="my-modal" className="btn btn-primary btn-lg btn-wide ">
           Start Game
         </label>
@@ -98,14 +104,13 @@ const Quiz = () => {
         <input type="checkbox" id="my-modal" className="modal-toggle" />
         <div className="modal">
           <div className="modal-box">
-            <h3 className="font-bold text-lg">
-              After you start quiz you should finish
-            </h3>
+            <h3 className="font-bold text-lg">Win this Week Champions</h3>
             <p className="py-4">
-              When you start quiz you should finish quiz inorder to win price
+              You answered 0 questions out of 50. You have to finish this week
+              quota in order to win.
             </p>
             <div className="modal-action">
-              <label for="my-modal" className="btn">
+              <label for="my-modal" className="btn" onClick={playChampions()}>
                 Ok!
               </label>
             </div>

@@ -24,7 +24,7 @@
               duration-150;
   }
   .btn-primary-large {
-    @apply text-white font-bold bg-gray-900 p-[20px] hover:bg-gray-700 ease-out transition-all duration-150 rounded-2xl text-xl  text-center dark:bg-gray-500 dark:hover:bg-gray-600;
+    @apply text-white font-bold bg-gray-900 p-[20px] hover:bg-gray-700 ease-out transition-all duration-150 rounded-lg text-xl  text-center dark:bg-gray-500 dark:hover:bg-gray-600;
   }
 
   .card {

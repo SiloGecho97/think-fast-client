@@ -1,28 +1,16 @@
 import React from 'react'
-import { Navigate, Route } from 'react-router-dom'
-import PropTypes from 'prop-types'
+import { Navigate, useLocation } from 'react-router-dom'
+import { getUserFromStorage } from '../_services/user.service'
 
-const PrivateRoute = ({ component: Component, ...rest }) => (
-  <Route
-    {...rest}
-    render={(props) =>
-      (localStorage.getItem('user') ? (
-        <Component {...props} />
-      ) : (
-        <Navigate
-          to={{
-            pathname: '/login',
-            state: { from: props.location },
-          }}
-        />
-      ))
-    }
-  />
-)
+const PrivateRoute = ({ path, element }) => {
+  const authed = getUserFromStorage()
+  const location = useLocation()
 
-PrivateRoute.propTypes = {
-  component: PropTypes.any,
-  location: PropTypes.any,
+  return authed ? (
+    <PrivateRoute path={path} element={element} />
+  ) : (
+    <Navigate to="/login" replace state={{ path: location.pathname }} />
+  )
 }
 
 export default PrivateRoute
