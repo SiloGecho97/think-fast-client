@@ -6,13 +6,13 @@ const FinishTrial = () => {
   return (
     <>
       <Header />
-      <div class="hero min-h-[40rem] bg-base-100 my-16">
-        <div class="flex flex-col">
-          <h1 class="text-3xl font-bold max-w-2xl">
+      <div className="hero min-h-[40rem] bg-base-100 my-16">
+        <div className="flex flex-col">
+          <h1 className="text-3xl font-bold max-w-2xl">
             Successfully Complete Practice game
           </h1>
-          <div class="max-w-md">
-            <p class="py-6">
+          <div className="max-w-md">
+            <p className="py-6">
               Provident cupiditate voluptatem et in. Quaerat fugiat ut assumenda
               excepturi exercitationem quasi. In deleniti eaque aut repudiandae
               et a id nisi.
@@ -91,7 +91,7 @@ const FinishTrial = () => {
                 <span>I read above listed points and Agree to terms </span>
               </span>
             </div>
-            <Link to="/verify" class="btn btn-primary">
+            <Link to="/verify" className="btn btn-primary">
               Continue
             </Link>
           </div>

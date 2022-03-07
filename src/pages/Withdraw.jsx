@@ -58,8 +58,8 @@ const Withdraw = () => {
           <div className="max-w-xl w-full">
             <h4 className="mb-4">Withdrawal Options</h4>
             <div className="card m-4">
-              <div class="card-body">
-                <h2 class="card-title">Exchange to mobile card</h2>
+              <div className="card-body">
+                <h2 className="card-title">Exchange to mobile card</h2>
                 <div>
                   <button className="btn m-4">Select 50 ETB</button>
                   <button className="btn m-4">Select 100 ETB</button>
@@ -67,26 +67,26 @@ const Withdraw = () => {
               </div>
             </div>
             <div className="card m-4">
-              <div class="card-body">
-                <h2 class="card-title">Transfer</h2>
+              <div className="card-body">
+                <h2 className="card-title">Transfer</h2>
                 <div>
                   <input
                     type="text"
                     placeholder="09316441**"
-                    class="input w-full max-w-xs border lg:mx-4 input-bordered"
+                    className="input w-full max-w-xs border lg:mx-4 input-bordered"
                   ></input>
                   <button className="btn my-4">Transfer</button>
                 </div>
               </div>
             </div>
             <div className="card m-4">
-              <div class="card-body">
-                <h2 class="card-title">Cash out</h2>
+              <div className="card-body">
+                <h2 className="card-title">Cash out</h2>
                 <div>
                   <input
                     type="text"
                     placeholder="50"
-                    class="input w-full max-w-xs border lg:mx-4 input-bordered"
+                    className="input w-full max-w-xs border lg:mx-4 input-bordered"
                   ></input>
                   <button className="btn my-4">Cashout</button>
                 </div>

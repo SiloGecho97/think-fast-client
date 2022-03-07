@@ -83,27 +83,27 @@ const TrialPlay = () => {
     <div className="bg-gray-50 pb-40">
       <Header />
 
-      <label for="my-modal" ref={modalRef} class="btn modal-button hidden">
+      <label for="my-modal" ref={modalRef} className="btn modal-button hidden">
         open modal
       </label>
-      <input type="checkbox" id="my-modal" class="modal-toggle" />
-      <div class="modal">
-        <div class="modal-box">
-          <h3 class="font-bold text-lg">This is Trial Game</h3>
-          <p class="py-4">
+      <input type="checkbox" id="my-modal" className="modal-toggle" />
+      <div className="modal">
+        <div className="modal-box">
+          <h3 className="font-bold text-lg">This is Trial Game</h3>
+          <p className="py-4">
             This is trial game to practice with system, You will not won price
             or earn anything
           </p>
-          <div class="modal-action">
-            <label for="my-modal" class="btn">
+          <div className="modal-action">
+            <label for="my-modal" className="btn">
               Continue
             </label>
           </div>
         </div>
       </div>
 
-      <div class="mt-20 mx-auto flex w-full justify-center">
-        <ul class="steps">
+      <div className="mt-20 mx-auto flex w-full justify-center">
+        <ul className="steps">
           <li class={`step ${current > 0 && 'step-primary'}`}>start</li>
           <li class={`step ${current > 1 && 'step-primary'}`}>2</li>
           <li class={`step ${current > 2 && 'step-primary'}`}>3</li>

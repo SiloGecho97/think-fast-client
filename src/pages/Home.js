@@ -75,9 +75,9 @@ const Home = () => {
       <div className="w-1/5 hidden lg:block bg-gray-100 h-auto p-5 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 border-0 border-gray-200">
         <div className="flex items-center justify-end">
           <FaBell className="w-6 h-6 mr-6 cursor-pointer" />
-          <div class="dropdown dropdown-end">
-            <div tabindex="0" class="avatar online cursor-pointer">
-              <div class="w-8 rounded-full">
+          <div className="dropdown dropdown-end">
+            <div tabindex="0" className="avatar online cursor-pointer">
+              <div className="w-8 rounded-full">
                 <img
                   src="https://api.lorem.space/image/face?hash=28212"
                   alt="Avatar"
@@ -86,13 +86,13 @@ const Home = () => {
             </div>
             <ul
               tabindex="0"
-              class="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52"
+              className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52"
             >
               <li>
                 <a>Account Setting</a>
               </li>
               <li>
-                <a>Withdraw</a>
+                <Link to="/withdraw">Withdraw</Link>
               </li>
               <li onClick={(e) => logout()}>
                 <a>Logout</a>
