@@ -1,5 +1,6 @@
 import { useEffect, useState } from 'react'
 import './App.css'
+import Footer from './partials/Footer'
 import Router from './routes/Routes'
 import { getUserFromStorage } from './_services/user.service'
 

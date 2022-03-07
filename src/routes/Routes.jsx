@@ -17,6 +17,7 @@ import TrialPlay from '../pages/trial/TrialPlay'
 import FinishTrial from '../pages/trial/FinishTrial'
 import VerifyPhone from '../pages/VerifyPhone'
 import ChampionsPlay from '../pages/quizes/Play'
+import Withdraw from '../pages/Withdraw'
 // import PrivateRoute from './PrivateRoute'
 
 const Router = () => {
@@ -39,6 +40,7 @@ const Router = () => {
           <Route path="/games/finish" element={<Congratulations />} />
           <Route path="/trial/play" element={<TrialPlay />} />
           <Route path="/trial/finish" element={<FinishTrial />} />
+          <Route path="/withdraw" element={<Withdraw />} />
         </Routes>
       </BrowserRouter>
     </div>

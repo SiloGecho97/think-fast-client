@@ -2,12 +2,20 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import { FaBell, FaDollarSign, FaSortNumericUp } from 'react-icons/fa'
 import Leadboard from '../components/quiz/Leadboard'
+import { useNavigate } from 'react-router-dom'
+import Footer from '../partials/Footer'
+
 const Home = () => {
+  const navigate = useNavigate()
+  const logout = () => {
+    localStorage.removeItem('user')
+    navigate('/')
+  }
   return (
     <div className="flex bg-gray-100">
-      <div className="w-4/5 shadow-2xl rounded-tr-4xl">
+      <div className="lg:w-4/5 w-full shadow-2xl lg:rounded-tr-4xl">
         <section>
-          <div className="bg-white dark:bg-gray-800 rounded-tr-4xl ">
+          <div className="bg-white dark:bg-gray-800 lg:rounded-tr-4xl ">
             <div className="text-center w-full mx-auto py-12 px-4 sm:px-6 lg:py-16 lg:px-8 z-20">
               <h2 className="text-3xl font-extrabold text-black dark:text-white sm:text-4xl">
                 <span className="block">Want to be Earn money Daily ?</span>
@@ -32,7 +40,7 @@ const Home = () => {
         </section>
 
         <section className="my-8 px-8 flex md:flex-row flex-col max-w-screen-2xl bg-indigo-900">
-          <div className="bg-gray- rounded-3xl w-full h-80 p-8">
+          <div className="rounded-3xl w-full lg:h-80 p-8">
             <h2 className="font-bold text-white text-6xl">Play Game</h2>
             <p className="my-3 max-w-md text-gray-200">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
@@ -45,7 +53,7 @@ const Home = () => {
           </div>
         </section>
         {/* this week champions */}
-        <section className="bg-gray-50 flex items-baseline w-full mx-8 px-8">
+        <section className="bg-gray-50  flex flex-col lg:flex-row items-baseline w-full px-8 ">
           <Leadboard />
           <div className="w-full p-8">
             <h3 className="leading-[120%]">
@@ -64,7 +72,7 @@ const Home = () => {
           </div>
         </section>
       </div>
-      <div className="w-1/5 bg-gray-100 h-auto p-5 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 border-0 border-gray-200">
+      <div className="w-1/5 hidden lg:block bg-gray-100 h-auto p-5 bg-clip-padding backdrop-filter backdrop-blur-xl bg-opacity-60 border-0 border-gray-200">
         <div className="flex items-center justify-end">
           <FaBell className="w-6 h-6 mr-6 cursor-pointer" />
           <div class="dropdown dropdown-end">
@@ -86,8 +94,8 @@ const Home = () => {
               <li>
                 <a>Withdraw</a>
               </li>
-              <li>
-                <a>Loguot</a>
+              <li onClick={(e) => logout()}>
+                <a>Logout</a>
               </li>
             </ul>
           </div>

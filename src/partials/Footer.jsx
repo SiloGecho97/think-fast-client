@@ -142,6 +142,8 @@ function Footer() {
             Copyright @ {new Date().getFullYear()}. All rights reserved.
           </div>
         </div>
+
+        <div className="fixed h-10 bg-gray-100"></div>
       </div>
     </footer>
   )
