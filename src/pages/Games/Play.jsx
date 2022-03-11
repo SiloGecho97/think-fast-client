@@ -37,71 +37,71 @@ const basic_questions = [
   },
 ]
 
-const mathsQuestion = [
-  {
-    question: 'How many hours are there in a day?',
-    choices: ['24 hours', '12 hours', '20 hours', '48 hours'],
-    answer: '24 hours',
-  },
-  {
-    question: '1 L is equal to how many grams?',
-    choices: ['100 ml', '1000 ml', '10 ml', '10000 ml'],
-    answer: '1000 ml',
-  },
-  {
-    question: 'The largest 4 digit number is?',
-    choices: ['999', '1000', '9999', '9000'],
-    answer: 'Kenya',
-  },
-  {
-    question: 'Which is the smallest planet in our solar system??',
-    choices: ['Mercury', 'Venus', 'Mars', 'Earth'],
-    answer: 'Mercury',
-  },
-  {
-    question: 'Who invented the Computer?',
-    choices: ['Charles Babbage ', 'Bill gate', 'Compute', 'Johannes Gutenberg'],
-    answer: 'Mercury',
-  },
-]
+// const mathsQuestion = [
+//   {
+//     question: 'How many hours are there in a day?',
+//     choices: ['24 hours', '12 hours', '20 hours', '48 hours'],
+//     answer: '24 hours',
+//   },
+//   {
+//     question: '1 L is equal to how many grams?',
+//     choices: ['100 ml', '1000 ml', '10 ml', '10000 ml'],
+//     answer: '1000 ml',
+//   },
+//   {
+//     question: 'The largest 4 digit number is?',
+//     choices: ['999', '1000', '9999', '9000'],
+//     answer: 'Kenya',
+//   },
+//   {
+//     question: 'Which is the smallest planet in our solar system??',
+//     choices: ['Mercury', 'Venus', 'Mars', 'Earth'],
+//     answer: 'Mercury',
+//   },
+//   {
+//     question: 'Who invented the Computer?',
+//     choices: ['Charles Babbage ', 'Bill gate', 'Compute', 'Johannes Gutenberg'],
+//     answer: 'Mercury',
+//   },
+// ]
 
-const infoQuestions = [
-  {
-    question: 'Who founded Facebook?',
-    choices: ['Marks Zuckerberg', 'John Zuckerberg', 'Bill Gate', 'Elon Mask'],
-    answer: 'Mark Zuckerberg',
-  },
-  {
-    question: 'Which is the longest river on Earth?',
-    choices: [
-      'Nile river',
-      'Victoria river',
-      'minnesota river',
-      'amazon river',
-    ],
-    answer: 'Nile river',
-  },
-  {
-    question: 'The largest 4 digit number is?',
-    choices: ['999', '1000', '9999', '9000'],
-    answer: 'Kenya',
-  },
-  {
-    question: 'Which is the smallest planet in our solar system??',
-    choices: ['Mercury', 'Venus', 'Mars', 'Earth'],
-    answer: 'Mercury',
-  },
-  {
-    question: 'Who invented the Computer?',
-    choices: ['Charles Babbage ', 'Bill gate', 'Compute', 'Johannes Gutenberg'],
-    answer: 'Mercury',
-  },
-]
+// const infoQuestions = [
+//   {
+//     question: 'Who founded Facebook?',
+//     choices: ['Marks Zuckerberg', 'John Zuckerberg', 'Bill Gate', 'Elon Mask'],
+//     answer: 'Mark Zuckerberg',
+//   },
+//   {
+//     question: 'Which is the longest river on Earth?',
+//     choices: [
+//       'Nile river',
+//       'Victoria river',
+//       'minnesota river',
+//       'amazon river',
+//     ],
+//     answer: 'Nile river',
+//   },
+//   {
+//     question: 'The largest 4 digit number is?',
+//     choices: ['999', '1000', '9999', '9000'],
+//     answer: 'Kenya',
+//   },
+//   {
+//     question: 'Which is the smallest planet in our solar system??',
+//     choices: ['Mercury', 'Venus', 'Mars', 'Earth'],
+//     answer: 'Mercury',
+//   },
+//   {
+//     question: 'Who invented the Computer?',
+//     choices: ['Charles Babbage ', 'Bill gate', 'Compute', 'Johannes Gutenberg'],
+//     answer: 'Mercury',
+//   },
+// ]
 
 const Play = () => {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0)
-  const [question, setQuestion] = useState(basic_questions)
+  const [question] = useState(basic_questions)
   const [selected, setSelected] = useState(null)
 
   const nextQuestions = () => {

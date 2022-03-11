@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 import { FaBell, FaDollarSign, FaSortNumericUp } from 'react-icons/fa'
 import Leadboard from '../components/quiz/Leadboard'
 import { useNavigate } from 'react-router-dom'
-import Footer from '../partials/Footer'
 
 const Home = () => {
   const navigate = useNavigate()
@@ -89,13 +88,13 @@ const Home = () => {
               className="p-2 shadow menu dropdown-content bg-base-100 rounded-box w-52"
             >
               <li>
-                <a>Account Setting</a>
+                <a href="/#">Account Setting</a>
               </li>
               <li>
                 <Link to="/withdraw">Withdraw</Link>
               </li>
               <li onClick={(e) => logout()}>
-                <a>Logout</a>
+                <a href="/#">Logout</a>
               </li>
             </ul>
           </div>

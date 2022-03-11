@@ -1,6 +1,5 @@
 import classNames from 'classnames'
 import React from 'react'
-import Header from '../../partials/Header'
 
 const fetchLeadboards = [
   {

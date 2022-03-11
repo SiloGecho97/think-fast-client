@@ -4,7 +4,6 @@ import { BiMoney } from 'react-icons/bi'
 import './App.css'
 import Router from './routes/Routes'
 import { getUserFromStorage } from './_services/user.service'
-import { Link } from 'react-router-dom'
 
 function App() {
   const [user, setUser] = useState(null)

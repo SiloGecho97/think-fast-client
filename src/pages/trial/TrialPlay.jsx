@@ -64,7 +64,7 @@ const trailQuestions = [
 const TrialPlay = () => {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0)
-  const [question, setQuestion] = useState(trailQuestions)
+  const [question] = useState(trailQuestions)
   const [selected, setSelected] = useState(null)
   const modalRef = useRef()
   useEffect(() => {

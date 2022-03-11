@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Timer from '../../components/Games/Timer'
 import Header from '../../partials/Header'
@@ -64,7 +64,7 @@ const trailQuestions = [
 const ChampionsPlay = () => {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0)
-  const [question, setQuestion] = useState(trailQuestions)
+  const [question] = useState(trailQuestions)
   const [selected, setSelected] = useState(null)
 
   const nextQuestions = () => {
