@@ -10,7 +10,6 @@ function App() {
   useEffect(() => {
     setUser(getUserFromStorage())
   }, [])
-  console.log(user)
   return (
     <div className="App">
       <Router />

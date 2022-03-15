@@ -4,6 +4,12 @@ import countdown from '../../assets/icons8-time.gif'
 import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 
+const infoData={
+  today:0.00,
+  week:0.00,
+  week2:0.00,
+  dailybalance:0.00
+}
 export const UILogin = () => {
   const navigate = useNavigate()
   const {
@@ -13,6 +19,8 @@ export const UILogin = () => {
   } = useForm()
   const onSubmit = (data) => {
     localStorage.setItem('user', JSON.stringify(data))
+    localStorage.setItem('info', JSON.stringify(infoData))
+
     navigate('/home')
   }
 

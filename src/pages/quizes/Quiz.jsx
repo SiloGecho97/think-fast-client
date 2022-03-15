@@ -16,7 +16,7 @@ const Quiz = () => {
     <>
       <Header />
       <section className="flex items-center justify-between max-w-7xl w-full mx-auto">
-        <div className="py-8 px-12 rounded-lg  border  bg-gray-200 dark:bg-gray-800 border-gray-900">
+        <div className="py-8 px-12 rounded-lg  border  bg-gray-200 dark:bg-gray-800 border-gray-200">
           <Card url="/withdraw">
             <FaMoneyCheck className="w-12 h-12" />
             <Card.Title>This Week Point</Card.Title>
@@ -111,7 +111,7 @@ const Quiz = () => {
               quota in order to win.
             </p>
             <div className="modal-action">
-              <label for="my-modal" className="btn" onClick={playChampions()}>
+              <label for="my-modal" className="btn" onClick={(e)=>playChampions()}>
                 Ok!
               </label>
             </div>

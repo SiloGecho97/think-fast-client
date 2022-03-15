@@ -61,6 +61,7 @@ const trailQuestions = [
   },
 ]
 
+const MAX_Q = 50
 const ChampionsPlay = () => {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0)
@@ -81,6 +82,7 @@ const ChampionsPlay = () => {
 
       <div className="mt-20 mx-auto flex w-full justify-center">
         <ul className="steps">
+
           <li class={`step ${current > 0 && 'step-primary'}`}>start</li>
           <li class={`step ${current > 1 && 'step-primary'}`}>2</li>
           <li class={`step ${current > 2 && 'step-primary'}`}>3</li>

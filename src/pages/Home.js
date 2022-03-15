@@ -1,10 +1,17 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Link } from 'react-router-dom'
 import { FaBell, FaDollarSign, FaSortNumericUp } from 'react-icons/fa'
 import Leadboard from '../components/quiz/Leadboard'
 import { useNavigate } from 'react-router-dom'
+import { getFromLocalStorage } from '../_services/user.service'
 
 const Home = () => {
+  const [info, setInfo] = useState({})
+  useEffect(() => {
+    // setUser(getFromLocalStorage())
+    setInfo(()=>getFromLocalStorage())
+  }, [])
+  
   const navigate = useNavigate()
   const logout = () => {
     localStorage.removeItem('user')
@@ -103,7 +110,7 @@ const Home = () => {
         <div className="flex flex-col my-8">
           <div className="bg-indigo-200 py-8 px-6 rounded-xl flex justify-between font-black text-xl items-baseline">
             <span>Daily</span>
-            <span>3000pts</span>
+            <span>{info.dailybalance}pts</span>
           </div>
           <div className="my-10">
             <p className="mb-3 ">Today</p>
@@ -111,7 +118,7 @@ const Home = () => {
               <span className="p-2 bg-indigo-900 rounded text-white">
                 <FaDollarSign className="" />
               </span>
-              <span className="font-bold text-primary "> +250pts</span>
+              <span className="font-bold text-primary ">{info.today}pts</span>
             </div>
           </div>
           <div className="mb-4">
@@ -120,13 +127,13 @@ const Home = () => {
               <span className="p-2 bg-indigo-900 rounded text-white">
                 <FaDollarSign className="" />
               </span>
-              <span className="font-bold text-green-700 "> +2350pts</span>
+              <span className="font-bold text-green-700 ">{info.week}pts</span>
             </div>
             <div className="flex justify-between border-b pb-2 mb-3 border-gray-200">
               <span className="p-2 bg-green-900 rounded text-white">
                 <FaSortNumericUp className="" />
               </span>
-              <span className="font-bold text-green-700 "> +150ETB</span>
+              <span className="font-bold text-green-700 "> {info.week2}pts</span>
             </div>
           </div>
         </div>
