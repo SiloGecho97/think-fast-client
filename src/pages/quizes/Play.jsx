@@ -76,23 +76,22 @@ const ChampionsPlay = () => {
       return
     }
   }
+
+  const list = []
+
+  for (let i=0; i<MAX_Q/3;i++) {
+    list.push(<li class={`step ${current > i && 'step-primary'}`}>{i}</li>
+    )
+  }
+
   return (
     <div className="bg-gray-50 pb-40">
       <Header />
 
       <div className="mt-20 mx-auto flex w-full justify-center">
         <ul className="steps">
+          {list}
 
-          <li class={`step ${current > 0 && 'step-primary'}`}>start</li>
-          <li class={`step ${current > 1 && 'step-primary'}`}>2</li>
-          <li class={`step ${current > 2 && 'step-primary'}`}>3</li>
-          <li class={`step ${current > 3 && 'step-primary'}`}>4</li>
-          <li class={`step ${current > 4 && 'step-primary'}`}>5</li>
-          <li class={`step ${current > 5 && 'step-primary'}`}>6</li>
-          <li class={`step ${current > 6 && 'step-primary'}`}>7</li>
-          <li class={`step ${current > 7 && 'step-primary'}`}>8</li>
-          <li class={`step ${current > 8 && 'step-primary'}`}>9</li>
-          <li class={`step ${current > 9 && 'step-primary'}`}>10</li>
         </ul>
       </div>
       <div className="px-16 -mt-8 flex justify-end ">
