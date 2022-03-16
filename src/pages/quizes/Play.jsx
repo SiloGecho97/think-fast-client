@@ -91,7 +91,6 @@ const ChampionsPlay = () => {
       <div className="mt-20 mx-auto flex w-full justify-center">
         <ul className="steps">
           {list}
-
         </ul>
       </div>
       <div className="px-16 -mt-8 flex justify-end ">

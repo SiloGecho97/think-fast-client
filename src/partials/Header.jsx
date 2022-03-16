@@ -5,7 +5,7 @@ const Header = () => {
     <div>
       <nav className="bg-white px-2 sm:px-4 py-4 rounded border-b border-gray-50 shadow">
         <div className="container flex flex-wrap justify-between items-center mx-auto">
-          <a href="/" className="flex">
+          <a href="/home" className="flex">
             <svg
               className="mr-3 h-10"
               viewBox="0 0 52 72"
