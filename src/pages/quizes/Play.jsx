@@ -7,7 +7,7 @@ const trailQuestions = [
   {
     question: 'Who founded Facebook?',
     choices: ['Marks Zuckerberg', 'John Zuckerberg', 'Bill Gate', 'Elon Mask'],
-    answer: 'Mark Zuckerberg',
+    answer: 'Marks Zuckerberg',
   },
   {
     question: 'Which is the longest river on Earth?',
@@ -67,7 +67,12 @@ const ChampionsPlay = () => {
   const [current, setCurrent] = useState(0)
   const [question] = useState(trailQuestions)
   const [selected, setSelected] = useState(null)
+  const [showAnswer, setshowAnswer] = useState(false)
 
+  const selectAnswer = (index)=>{
+    setshowAnswer(true)
+    setSelected(index)
+  }
   const nextQuestions = () => {
     setSelected(null)
     setCurrent(current + 1)
@@ -104,7 +109,7 @@ const ChampionsPlay = () => {
           <ul className="m-6 max-w-[480px] mx-auto w-full">
             {question[current].choices.map((choice, index) => (
               <li
-                onClick={(e) => setSelected(index)}
+                onClick={(e) => selectAnswer(index)}
                 key={index}
                 className={` ${
                   selected !== index
@@ -112,8 +117,8 @@ const ChampionsPlay = () => {
                     : 'rounded-full px-10 p-3 m-4 hover:text-white bg-indigo-800 hover:bg-indigo-800 text-white hover:shadow-xl cursor-pointer'
                 }`}
               >
-                {choice}
-              </li>
+                {choice} {showAnswer && choice===question[current].answer && <span className='bg-green-700 py-1 mx-4 text-white px-4 rounded-md'> Correct! </span>}
+              </li> 
             ))}
           </ul>
           <div onClick={(e) => nextQuestions()} className="float-right mx-auto">

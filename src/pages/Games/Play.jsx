@@ -103,15 +103,15 @@ const Play = () => {
   const [current, setCurrent] = useState(0)
   const [question] = useState(basic_questions)
   const [selected, setSelected] = useState(null)
-
   const nextQuestions = () => {
     setSelected(null)
     setCurrent(current + 1)
-    if (current === 4) {
+    if (current === 9) {
       navigate('/games/finish')
       return
     }
   }
+ 
   return (
     <div className="bg-gray-50 pb-40">
       <Header />
