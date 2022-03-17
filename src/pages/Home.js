@@ -121,6 +121,15 @@ const Home = () => {
               <span className="font-bold text-primary ">{info.today}pts</span>
             </div>
           </div>
+          <div className="my-10">
+            <p className="mb-3 ">Weekly Champions</p>
+            <div className="flex justify-between border-b pb-2 mb-3 border-gray-200">
+              <span className="p-2 bg-indigo-900 rounded text-white">
+                <FaDollarSign className="" />
+              </span>
+              <span className="font-bold text-primary ">{info.championsPt}pts</span>
+            </div>
+          </div>
           <div className="mb-4">
             <p className="mb-3 ">This Week</p>
             <div className="flex justify-between border-b pb-2 mb-3 border-gray-200">
