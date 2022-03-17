@@ -18,6 +18,7 @@ import FinishTrial from '../pages/trial/FinishTrial'
 import VerifyPhone from '../pages/VerifyPhone'
 import ChampionsPlay from '../pages/quizes/Play'
 import Withdraw from '../pages/Withdraw'
+import ChampionFinish from '../pages/quizes/Finish'
 // import PrivateRoute from './PrivateRoute'
 
 const Router = () => {
@@ -34,6 +35,7 @@ const Router = () => {
           <Route path="/home" element={<Home />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/quiz/play" element={<ChampionsPlay />} />
+          <Route path="/quiz/finish" element={<ChampionFinish />} />
           <Route path="/games" element={<Intro />} />
           <Route path="/games/category" element={<Categroy />} />
           <Route path="/games/play" element={<Play />} />

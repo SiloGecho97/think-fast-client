@@ -97,54 +97,68 @@ const basic_questions = [
 //     answer: 'Mercury',
 //   },
 // ]
-
+const MAX_Q = 30
 const Play = () => {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0)
   const [question] = useState(basic_questions)
-  const [selected, setSelected] = useState(null)
+  const [selected, setSelected] = useState(null) 
+  const [showAnswer, setshowAnswer] = useState(false)
+  const selectAnswer = (index)=>{
+    setshowAnswer(true)
+    if(selected===null){setSelected(index)}
+  }
   const nextQuestions = () => {
+    setshowAnswer(false)
     setSelected(null)
     setCurrent(current + 1)
     if (current === 9) {
-      navigate('/games/finish')
+      navigate('/game')
       return
     }
   }
- 
+
+  const list = []
+
+  for (let i=0; i<MAX_Q/3;i++) {
+    list.push(<li class={`step ${current > i && 'step-primary'}`}>{i}</li>
+    )
+  }
+
   return (
     <div className="bg-gray-50 pb-40">
       <Header />
-      <div className="px-16 flex justify-end ">
+
+      <div className="mt-20 mx-auto flex w-full justify-center">
+        <ul className="steps">
+          {list}
+        </ul>
+      </div>
+      <div className="px-16 -mt-8 flex justify-end ">
         <Timer />
       </div>
       <div className="mx-auto w-full flex flex-col items-center my-0">
-        <p className="text-3xl my-4">
-          Question{' '}
-          <span className="text-primary font-bold">{current + 1} </span>
-          out 5
-        </p>
-        <div className="card max-w-2xl w-full p-16">
-          <p className="text-3xl font-bold text-center">
+        <div className="card max-w-4xl w-full p-16">
+          <p className="text-2xl font-bold text-center">
             {question[current].question}
           </p>
-          <ul className="m-6 max-w-lg">
+          <ul className="m-6 max-w-[480px] mx-auto w-full">
             {question[current].choices.map((choice, index) => (
               <li
-                onClick={(e) => setSelected(index)}
+                onClick={(e) => selectAnswer(index)}
                 key={index}
-                className={` ${
+                className={`rounded-full px-10 p-3 m-4 border border-indigo-100  ${
                   selected !== index
-                    ? 'bg-gray-200 rounded-full px-10 p-4 m-4 text-primary hover:bg-primary hover:text-white hover:shadow-xl cursor-pointer'
-                    : 'rounded-full px-10 p-4 m-4 hover:text-white bg-primary hover:bg-primary text-white hover:shadow-xl cursor-pointer'
-                }`}
+                    ? ''
+                   : choice===question[current].answer  ? 'bg-lime-400'  : 'bg-red-700 text-white'  
+                } ${selected===null && 'cursor-pointer hover:border-indigo-700 hover:shadow-lg'}`}
               >
-                {choice}
-              </li>
+                {choice} {showAnswer && choice===question[current].answer && <span className='bg-green-800 py-1 mx-4 text-white px-4 rounded-md'> Correct! </span>}
+              </li> 
             ))}
           </ul>
-          <div onClick={(e) => nextQuestions()} className="float-right">
-            <button className="btn btn-accent btn-wide mt-8 text-xl">
+          <div onClick={(e) => nextQuestions()} className="float-right mx-auto">
+            <button className="btn btn-wide mt-8 text-xl mx-auto">
               Next Question
             </button>
           </div>

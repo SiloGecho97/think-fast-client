@@ -3,23 +3,23 @@ import React from 'react'
 
 const fetchLeadboards = [
   {
-    name: 'Silas Getachew',
+    name: 'Abinat Getachew',
     score: 220,
   },
   {
-    name: 'Bekela Dagaga',
+    name: 'Tola Adamu',
     score: 130,
   },
   {
-    name: 'Amanu Tolosa',
+    name: 'Yonathan Tolosa',
     score: 120,
   },
   {
-    name: 'Idosa Tadasa',
+    name: 'Fikiru Tadasa',
     score: 100,
   },
   {
-    name: 'Jawar Gobana',
+    name: 'Mohammed Ahmed',
     score: 90,
   },
 ]

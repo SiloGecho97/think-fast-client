@@ -1,12 +1,14 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { FaMoneyCheck } from 'react-icons/fa'
 import { useNavigate } from 'react-router-dom'
 import Card from '../../components/Global/Card'
 import Leadboard from '../../components/quiz/Leadboard'
 import Header from '../../partials/Header'
+import { getInfo } from '../../_services/user.service'
 
 const Quiz = () => {
   const navigate = useNavigate()
+  const [info, setInfo] = useState(getInfo())
 
   const playChampions = () => {
     navigate('/quiz/play')
@@ -20,7 +22,7 @@ const Quiz = () => {
           <Card url="/withdraw">
             <FaMoneyCheck className="w-12 h-12" />
             <Card.Title>This Week Point</Card.Title>
-            <Card.Number>1230pts</Card.Number>
+            <Card.Number>{info?.championsPt}pts</Card.Number>
           </Card>
         </div>
         <Leadboard />

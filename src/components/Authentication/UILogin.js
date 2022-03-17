@@ -5,10 +5,11 @@ import { useForm } from 'react-hook-form'
 import { useNavigate } from 'react-router-dom'
 
 const infoData={
-  today:0.00,
-  week:0.00,
-  week2:0.00,
-  dailybalance:0.00
+  today:0,
+  week:0,
+  week2:0,
+  dailybalance:0,
+  championsPt:0
 }
 export const UILogin = () => {
   const navigate = useNavigate()

@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Timer from '../../components/Games/Timer'
 import Header from '../../partials/Header'
+import {  getInfo, setToLocalStorage } from '../../_services/user.service'
 
 const trailQuestions = [
   {
@@ -49,6 +50,73 @@ const trailQuestions = [
     choices: ['999', '1000', '9999', '9000'],
     answer: 'Kenya',
   },
+  
+  {
+    question: '1 L is equal to how many grams?',
+    choices: ['100 ml', '1000 ml', '10 ml', '10000 ml'],
+    answer: '1000 ml',
+  },
+  {
+    question: 'The largest 4 digit number is?',
+    choices: ['999', '1000', '9999', '9000'],
+    answer: 'Kenya',
+  },
+  {
+    question: 'Which is the smallest planet in our solar system??',
+    choices: ['Mercury', 'Venus', 'Mars', 'Earth'],
+    answer: 'Mercury',
+  },
+  {
+    question: 'Who invented the Computer?',
+    choices: ['Charles Babbage ', 'Bill gate', 'Compute', 'Johannes Gutenberg'],
+    answer: 'Mercury',
+  },
+  {
+    question: '1 L is equal to how many grams?',
+    choices: ['100 ml', '1000 ml', '10 ml', '10000 ml'],
+    answer: '1000 ml',
+  },
+  {
+    question: 'The largest 4 digit number is?',
+    choices: ['999', '1000', '9999', '9000'],
+    answer: 'Kenya',
+  },
+  {
+    question: 'Which is the smallest planet in our solar system??',
+    choices: ['Mercury', 'Venus', 'Mars', 'Earth'],
+    answer: 'Mercury',
+  },
+  {
+    question: 'Who invented the Computer?',
+    choices: ['Charles Babbage ', 'Bill gate', 'Compute', 'Johannes Gutenberg'],
+    answer: 'Mercury',
+  },
+  {
+    question: 'How many hours are there in a day?',
+    choices: ['24 hours', '12 hours', '20 hours', '48 hours'],
+    answer: '24 hours',
+  },
+  {
+    question: '1 L is equal to how many grams?',
+    choices: ['100 ml', '1000 ml', '10 ml', '10000 ml'],
+    answer: '1000 ml',
+  },
+  {
+    question: 'The largest 4 digit number is?',
+    choices: ['999', '1000', '9999', '9000'],
+    answer: 'Kenya',
+  },
+  {
+    question: 'Which is the smallest planet in our solar system??',
+    choices: ['Mercury', 'Venus', 'Mars', 'Earth'],
+    answer: 'Mercury',
+  },
+  {
+    question: 'Who invented the Computer?',
+    choices: ['Charles Babbage ', 'Bill gate', 'Compute', 'Johannes Gutenberg'],
+    answer: 'Mercury',
+  },
+ 
   {
     question: 'Which is the smallest planet in our solar system??',
     choices: ['Mercury', 'Venus', 'Mars', 'Earth'],
@@ -61,33 +129,46 @@ const trailQuestions = [
   },
 ]
 
-const MAX_Q = 50
+const step = (current,start,end,list) => {
+  let i=start
+  for (i; i<end;i++) {
+    list.push(<li class={`step ${current >= i && 'step-primary'}`}>{i}</li>
+    )
+  }
+  return (
+    list
+  )
+}
 const ChampionsPlay = () => {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0)
   const [question] = useState(trailQuestions)
   const [selected, setSelected] = useState(null)
   const [showAnswer, setshowAnswer] = useState(false)
+  const [info, setInfo] = useState(getInfo())
+  const [end,setEnd] = useState(10)
+  const [start,setStart] = useState(1)
+
 
   const selectAnswer = (index)=>{
     setshowAnswer(true)
-    if(!selected)setSelected(index)
+    if(selected===null){setSelected(index)}
   }
   const nextQuestions = () => {
     setshowAnswer(false)
     setSelected(null)
     setCurrent(current + 1)
-    if (current === 9) {
-      navigate('/trial/finish')
+    setInfo({...info,championsPt:info.championsPt+10})
+    setToLocalStorage(info)
+    if(current===question.length-1){
+      navigate('/quiz/finish')
       return
     }
-  }
-
-  const list = []
-
-  for (let i=0; i<MAX_Q/3;i++) {
-    list.push(<li class={`step ${current > i && 'step-primary'}`}>{i}</li>
-    )
+    console.log(current,question.length%current,end)
+    if (current === end ) {
+      
+      setEnd(end+10)
+    }
   }
 
   return (
@@ -96,7 +177,7 @@ const ChampionsPlay = () => {
 
       <div className="mt-20 mx-auto flex w-full justify-center">
         <ul className="steps">
-          {list}
+          {step(current,start,end,[])}
         </ul>
       </div>
       <div className="px-16 -mt-8 flex justify-end ">
@@ -115,10 +196,10 @@ const ChampionsPlay = () => {
                 className={`rounded-full px-10 p-3 m-4 border border-indigo-100  ${
                   selected !== index
                     ? ''
-                   : choice===question[current].answer  ? 'bg-green-800'  : 'bg-red-900 text-white'  
-                } ${!selected && 'cursor-pointer hover:border-indigo-700 hover:shadow-lg'}`}
+                   : choice===question[current].answer  ? 'bg-lime-400'  : 'bg-red-700 text-white'  
+                } ${selected===null && 'cursor-pointer hover:border-indigo-700 hover:shadow-lg'}`}
               >
-                {choice} {showAnswer && choice===question[current].answer && <span className='bg-green-700 py-1 mx-4 text-white px-4 rounded-md'> Correct! </span>}
+                {choice} {showAnswer && choice===question[current].answer && <span className='bg-green-800 py-1 mx-4 text-white px-4 rounded-md'> Correct! </span>}
               </li> 
             ))}
           </ul>

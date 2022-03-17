@@ -25,6 +25,7 @@ module.exports = {
       purple: colors.purple,
       pink: colors.pink,
       sky: colors.sky,
+      lime:colors.lime,
       green: colors.green,
       primary: '#302E80',
       secondary: '#545DAA',
