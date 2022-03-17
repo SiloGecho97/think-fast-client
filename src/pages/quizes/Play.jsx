@@ -71,9 +71,10 @@ const ChampionsPlay = () => {
 
   const selectAnswer = (index)=>{
     setshowAnswer(true)
-    setSelected(index)
+    if(!selected)setSelected(index)
   }
   const nextQuestions = () => {
+    setshowAnswer(false)
     setSelected(null)
     setCurrent(current + 1)
     if (current === 9) {
@@ -111,11 +112,11 @@ const ChampionsPlay = () => {
               <li
                 onClick={(e) => selectAnswer(index)}
                 key={index}
-                className={` ${
+                className={`rounded-full px-10 p-3 m-4 border border-indigo-100  ${
                   selected !== index
-                    ? 'bg-gray-200 rounded-full px-10 p-3 m-4 text-indigo-900 hover:bg-indigo-800 hover:text-white hover:shadow-xl cursor-pointer'
-                    : 'rounded-full px-10 p-3 m-4 hover:text-white bg-indigo-800 hover:bg-indigo-800 text-white hover:shadow-xl cursor-pointer'
-                }`}
+                    ? ''
+                   : choice===question[current].answer  ? 'bg-green-800'  : 'bg-red-900 text-white'  
+                } ${!selected && 'cursor-pointer hover:border-indigo-700 hover:shadow-lg'}`}
               >
                 {choice} {showAnswer && choice===question[current].answer && <span className='bg-green-700 py-1 mx-4 text-white px-4 rounded-md'> Correct! </span>}
               </li> 
