@@ -9,9 +9,9 @@ const FailedAnswer = () => {
     <h4>You can play again other category question.</h4>
     <p className="text-3xl text-blue-100">
     </p>
-    <Link to="/home" className="my-4">
+    <Link to="/games" className="my-4">
       <Button variant="secondary" pill={true} size="extra">
-        Return to Home
+        Play Again
       </Button>
     </Link>
   </div>

@@ -46,12 +46,12 @@ const Home = () => {
         </section>
 
         <section className="my-8 px-8 flex md:flex-row flex-col max-w-screen-2xl bg-indigo-900">
-          <div className="rounded-3xl w-full lg:h-80 p-8">
+          <div className="rounded-3xl w-full lg:h-76 p-8">
             <h2 className="font-bold text-white text-6xl">Play Game</h2>
             <p className="my-3 max-w-md text-gray-200">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco
+              Play Game as much as you can, earn points. Inorder to play games you need to 
+              select category first, you have to answer atleast three question to pass the next round. 
+              if you finish all the round of one category, you will collect points.
             </p>
             <Link to="/games" className="btn btn-outline btn-accent ">
               Play
@@ -68,9 +68,8 @@ const Home = () => {
               Quiz
             </h3>
             <p className="my-3 max-w-md text-gray-900">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
-              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
-              enim ad minim veniam, quis nostrud exercitation ullamco
+              Compete with other to win Weekly Champions. Inorder to win you have to answer all 50 questions.
+              Top 3 of the leadboard will win the price. 
             </p>
             <Link to="/quiz" className="btn-primary-large my-8 w-max block">
               Get Start
