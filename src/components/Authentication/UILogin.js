@@ -9,7 +9,8 @@ const infoData={
   week:0,
   week2:0,
   dailybalance:0,
-  championsPt:0
+  championsPt:0,
+  name:"Abebe Tasew"
 }
 export const UILogin = () => {
   const navigate = useNavigate()
@@ -21,7 +22,6 @@ export const UILogin = () => {
   const onSubmit = (data) => {
     localStorage.setItem('user', JSON.stringify(data))
     localStorage.setItem('info', JSON.stringify(infoData))
-
     navigate('/home')
   }
 

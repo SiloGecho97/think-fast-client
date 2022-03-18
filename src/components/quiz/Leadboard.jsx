@@ -1,5 +1,6 @@
 import classNames from 'classnames'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
+import { getInfo } from '../../_services/user.service'
 
 const fetchLeadboards = [
   {
@@ -20,10 +21,16 @@ const fetchLeadboards = [
   },
   {
     name: 'Mohammed Ahmed',
-    score: 90,
-  },
+    score: 290,
+  }
 ]
 const Leadboard = () => {
+  const [user, _]= useState(()=>getInfo())
+  useEffect(()=>{
+    fetchLeadboards.push({name:"Your position",score:user.championsPt})
+    fetchLeadboards.sort((a,b)=>b.score-a.score)
+  },[user])
+  
   return (
     <div className="max-w-xl my-12 w-full">
       <h4 className="text-gray-800 font-bold font-sora  mt-8 mb-4 -ml-1 ">
@@ -50,6 +57,7 @@ const Leadboard = () => {
           <span className="text-2xl font-black">{item.score}</span>
         </div>
       ))}
+      
     </div>
   )
 }
