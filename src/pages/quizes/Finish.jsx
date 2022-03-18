@@ -11,7 +11,7 @@ const ChampionFinish = () => {
       <h1 className="text-8xl font-bold">Congratulations </h1>
       <h4>You finished all this week quata</h4>
       <p className="text-3xl text-blue-100">
-        You Earn {info.championsPt}
+        You collect  {info.championsPt}
       </p>
       <Link to="/home" className="my-4">
         <Button variant="secondary" pill={true} size="extra">

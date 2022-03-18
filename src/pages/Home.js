@@ -37,7 +37,7 @@ const Home = () => {
               <div className="lg:mt-0 lg:flex-shrink-0">
                 <div className="mt-12 inline-flex rounded-md shadow">
                   <Link to="/quiz" type="button" className="btn btn-primary">
-                    Play Daily Quiz
+                    Play Weekly Quiz
                   </Link>
                 </div>
               </div>

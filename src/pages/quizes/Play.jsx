@@ -23,7 +23,7 @@ const trailQuestions = [
   {
     question: 'The largest 4 digit number is?',
     choices: ['999', '1000', '9999', '9000'],
-    answer: 'Kenya',
+    answer: '9999',
   },
   {
     question: 'Which is the smallest planet in our solar system??',
@@ -32,8 +32,8 @@ const trailQuestions = [
   },
   {
     question: 'Who invented the Computer?',
-    choices: ['Charles Babbage ', 'Bill gate', 'Compute', 'Johannes Gutenberg'],
-    answer: 'Mercury',
+    choices: ['Charles Babbage', 'Bill gate', 'Compute', 'Johannes Gutenberg'],
+    answer: 'Charles Babbage',
   },
   {
     question: 'How many hours are there in a day?',
@@ -48,18 +48,18 @@ const trailQuestions = [
   {
     question: 'The largest 4 digit number is?',
     choices: ['999', '1000', '9999', '9000'],
-    answer: 'Kenya',
+    answer: '9999',
   },
   
   {
-    question: '1 L is equal to how many grams?',
+    question: '1 mL is equal to how many grams?',
     choices: ['100 ml', '1000 ml', '10 ml', '10000 ml'],
     answer: '1000 ml',
   },
   {
-    question: 'The largest 4 digit number is?',
+    question: 'The largest 3 digit number is?',
     choices: ['999', '1000', '9999', '9000'],
-    answer: 'Kenya',
+    answer: '9999',
   },
   {
     question: 'Which is the smallest planet in our solar system??',
@@ -69,7 +69,7 @@ const trailQuestions = [
   {
     question: 'Who invented the Computer?',
     choices: ['Charles Babbage ', 'Bill gate', 'Compute', 'Johannes Gutenberg'],
-    answer: 'Mercury',
+    answer: 'Charles Babbage',
   },
   {
     question: '1 L is equal to how many grams?',
@@ -79,7 +79,7 @@ const trailQuestions = [
   {
     question: 'The largest 4 digit number is?',
     choices: ['999', '1000', '9999', '9000'],
-    answer: 'Kenya',
+    answer: '9999',
   },
   {
     question: 'Which is the smallest planet in our solar system??',
@@ -97,35 +97,46 @@ const trailQuestions = [
     answer: '24 hours',
   },
   {
-    question: '1 L is equal to how many grams?',
-    choices: ['100 ml', '1000 ml', '10 ml', '10000 ml'],
-    answer: '1000 ml',
+    question: 'Who invented the Light Bulb?',
+    choices: [
+      'Thomas Alva Edison',
+      'Charles Babbage',
+      'Jefferson John',
+      'Albert Enstein',
+    ],
+    answer: 'Thomas Alva Edison',
   },
   {
-    question: 'The largest 4 digit number is?',
-    choices: ['999', '1000', '9999', '9000'],
+    question:
+      'In which year of First World War Germany declared war on Russia and France?',
+    choices: ['1914', '1915', '1916', '1918'],
+    answer: '1914',
+  },
+  {
+    question: 'The Leopard is the national animal of?',
+    choices: ['Kenya', 'Tanzania', 'Ethiopia', 'Brazil'],
     answer: 'Kenya',
   },
   {
-    question: 'Which is the smallest planet in our solar system??',
-    choices: ['Mercury', 'Venus', 'Mars', 'Earth'],
-    answer: 'Mercury',
+    question: 'Who invented the Light Bulb?',
+    choices: [
+      'Thomas Alva Edison',
+      'Charles Babbage',
+      'Jefferson John',
+      'Albert Enstein',
+    ],
+    answer: 'Thomas Alva Edison',
   },
   {
-    question: 'Who invented the Computer?',
-    choices: ['Charles Babbage ', 'Bill gate', 'Compute', 'Johannes Gutenberg'],
-    answer: 'Mercury',
-  },
- 
-  {
-    question: 'Which is the smallest planet in our solar system??',
-    choices: ['Mercury', 'Venus', 'Mars', 'Earth'],
-    answer: 'Mercury',
+    question:
+      'In which year of First World War Germany declared war on Russia and France?',
+    choices: ['1914', '1915', '1916', '1918'],
+    answer: '1914',
   },
   {
-    question: 'Who invented the Computer?',
-    choices: ['Charles Babbage ', 'Bill gate', 'Compute', 'Johannes Gutenberg'],
-    answer: 'Mercury',
+    question: 'The Leopard is the national animal of?',
+    choices: ['Kenya', 'Tanzania', 'Ethiopia', 'Brazil'],
+    answer: 'Kenya',
   },
 ]
 

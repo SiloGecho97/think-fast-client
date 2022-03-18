@@ -6,20 +6,21 @@ const Intro = () => {
   return (
     <div>
       <Header />
-      <h1 className="typo-h1 mt-8">Game Instruction before start</h1>
+      <h1 className="typo-h1 mt-8  text-indigo-900">Game Instruction before start</h1>
       <div className="flex flex-col items-center">
         <ul className="list-decimal text-2xl mx-auto my-12">
+          <li className="my-4">
+            Each Category have Four round
+          </li>
           <li className="my-4">One Round contain Five question</li>
           <li className="my-4">
-            You should answer three round to pass next round.
+            You should answer three question to pass next round.
           </li>
           <li className="my-4">
             Question should be answer withind given time(30sec)
           </li>
-          <li className="my-4">
-            You only award if you finish total round to selected for candidate
-          </li>
-          <li className="my-4">Top Five leadboard will be awarded</li>
+          <li className="my-4">You can play game as much as you can.</li>
+          <li className="my-4">If you finish one category, You get 20 points</li>
         </ul>
         <Link
           to="/games/category"

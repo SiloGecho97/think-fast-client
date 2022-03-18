@@ -97,16 +97,23 @@ const basic_questions = [
 //     answer: 'Mercury',
 //   },
 // ]
-const MAX_Q = 30
+const MAX_Q = 20
 const Play = () => {
   const navigate = useNavigate()
   const [current, setCurrent] = useState(0)
   const [question] = useState(basic_questions)
   const [selected, setSelected] = useState(null) 
   const [showAnswer, setshowAnswer] = useState(false)
-  const selectAnswer = (index)=>{
+  const selectAnswer = (index,choice)=>{
     setshowAnswer(true)
-    if(selected===null){setSelected(index)}
+    if(selected===null){
+      setSelected(index)
+
+      if(choice!==question[current].answer){
+        setTimeout(() => {
+          navigate('/games/failed')
+        }, 500)}
+      }
   }
   const nextQuestions = () => {
     setshowAnswer(false)
@@ -114,14 +121,15 @@ const Play = () => {
     setCurrent(current + 1)
     if (current === 9) {
       navigate('/game')
+
       return
     }
   }
 
   const list = []
 
-  for (let i=0; i<MAX_Q/3;i++) {
-    list.push(<li class={`step ${current > i && 'step-primary'}`}>{i}</li>
+  for (let i=1; i<=MAX_Q/4;i++) {
+    list.push(<li class={`step ${current >= i && 'step-primary'}`}>{i}</li>
     )
   }
 
@@ -139,13 +147,16 @@ const Play = () => {
       </div>
       <div className="mx-auto w-full flex flex-col items-center my-0">
         <div className="card max-w-4xl w-full p-16">
+        <div className='mx-auto text-2xl font-black text-green-900 -mt-8 mb-8'>
+          ROUND 1 
+        </div>  
           <p className="text-2xl font-bold text-center">
             {question[current].question}
           </p>
           <ul className="m-6 max-w-[480px] mx-auto w-full">
             {question[current].choices.map((choice, index) => (
               <li
-                onClick={(e) => selectAnswer(index)}
+                onClick={(e) => selectAnswer(index,choice)}
                 key={index}
                 className={`rounded-full px-10 p-3 m-4 border border-indigo-100  ${
                   selected !== index

@@ -19,6 +19,7 @@ import VerifyPhone from '../pages/VerifyPhone'
 import ChampionsPlay from '../pages/quizes/Play'
 import Withdraw from '../pages/Withdraw'
 import ChampionFinish from '../pages/quizes/Finish'
+import FailedAnswer from '../pages/Games/Failed'
 // import PrivateRoute from './PrivateRoute'
 
 const Router = () => {
@@ -39,6 +40,7 @@ const Router = () => {
           <Route path="/games" element={<Intro />} />
           <Route path="/games/category" element={<Categroy />} />
           <Route path="/games/play" element={<Play />} />
+          <Route path="/games/failed" element={<FailedAnswer />} />
           <Route path="/games/finish" element={<Congratulations />} />
           <Route path="/trial/play" element={<TrialPlay />} />
           <Route path="/trial/finish" element={<FinishTrial />} />
