@@ -52,7 +52,7 @@ function LandingHeader() {
 
           {/* Site navigation */}
           <nav className="flex flex-grow">
-            <ul className="flex flex-grow justify-end flex-wrap items-center">
+            <ul className="flex flex-grow justify-end  items-center">
               <li>
                 <Link
                   to="/login"
@@ -68,7 +68,7 @@ function LandingHeader() {
                 >
                   Sign up
                   <svg
-                    className="w-2 h-2 inline fill-current text-gray-400 flex-shrink-0 ml-2 -mr-1"
+                    className="hidden md:inline w-2 h-2  fill-current text-gray-400 flex-shrink-0 ml-2 -mr-1"
                     viewBox="0 0 12 12"
                     xmlns="http://www.w3.org/2000/svg"
                   >

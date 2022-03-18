@@ -8,19 +8,19 @@ const Intro = () => {
       <Header />
       <h1 className="typo-h1 mt-8  text-indigo-900">Game Instruction before start</h1>
       <div className="flex flex-col items-center">
-        <ul className="list-decimal text-2xl mx-auto my-12">
-          <li className="my-4">
-            Each Category have Four round
+        <ul className="text-xl mx-auto my-12 card">
+          <li className="px-6 py-4 border shadow-sm">
+            ⚠️ Each Category have Four round
           </li>
-          <li className="my-4">One Round contain Five question</li>
-          <li className="my-4">
-            You should answer three question to pass next round.
+          <li className="px-6 py-4 border shadow-sm">ℹ️ One Round contain Five question</li>
+          <li className="px-6 py-4 border shadow-sm">
+            😳 You should answer three question to pass next round.
           </li>
-          <li className="my-4">
-            Question should be answer withind given time(30sec)
+          <li className="px-6 py-4 border shadow-sm">
+           ⏰ Question should be answer withind given time(30sec)
           </li>
-          <li className="my-4">You can play game as much as you can.</li>
-          <li className="my-4">If you finish one category, You get 20 points</li>
+          <li className="px-6 py-4 border shadow-sm">😱 You can play game as much as you can.</li>
+          <li className="px-6 py-4 border shadow-sm">💰 If you finish one category, You get 20 points</li>
         </ul>
         <Link
           to="/games/category"

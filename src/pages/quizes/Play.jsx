@@ -142,7 +142,7 @@ const trailQuestions = [
 
 const step = (current,start,end,list) => {
   let i=start
-  for (i; i<end;i++) {
+  for (i; i<=end;i++) {
     list.push(<li class={`step ${current >= i && 'step-primary'}`}>{i}</li>
     )
   }
@@ -165,6 +165,7 @@ const ChampionsPlay = () => {
     setshowAnswer(true)
     if(selected===null){setSelected(index)}
   }
+
   const nextQuestions = () => {
     setshowAnswer(false)
     setSelected(null)
@@ -175,12 +176,13 @@ const ChampionsPlay = () => {
       navigate('/quiz/finish')
       return
     }
-    console.log(current,question.length%current,end)
     if (current === end ) {
-      
+      setStart(end)
       setEnd(end+10)
     }
   }
+
+  
 
   return (
     <div className="bg-gray-50 pb-40">

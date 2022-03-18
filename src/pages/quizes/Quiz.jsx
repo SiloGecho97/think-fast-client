@@ -109,8 +109,7 @@ const Quiz = () => {
           <div className="modal-box">
             <h3 className="font-bold text-lg">Win this Week Champions</h3>
             <p className="py-4">
-              You answered 0 questions out of 50. You have to finish this week
-              quota in order to win.
+              Answer all the questions, Be this week top 3 finish all the question.
             </p>
             <div className="modal-action">
               <label for="my-modal" className="btn" onClick={(e)=>playChampions()}>

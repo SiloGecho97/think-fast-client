@@ -143,16 +143,17 @@ const Play = () => {
   const [selected, setSelected] = useState(null)
   const [showAnswer, setshowAnswer] = useState(false)
   const [round, setRound] = useState(1)
+  const [incorrect, setIncorrect] = useState(0)
   let i = 1
+  console.log(incorrect)
   const selectAnswer = (index, choice) => {
     setshowAnswer(true)
-    if (selected === null) {
-      setSelected(index)
-
-      if (choice !== question[current].answer) {
-        setTimeout(() => {
-          navigate('/games/failed')
-        }, 500)
+    if(selected !==null) return
+    setSelected(index)
+    if (choice !== question[current].answer) {
+      setIncorrect(incorrect+1)
+      if(incorrect >= 2){
+        navigate('/games/failed')
       }
     }
   }

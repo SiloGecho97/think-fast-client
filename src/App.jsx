@@ -1,20 +1,21 @@
 import { useEffect, useState } from 'react'
 import { FaGamepad, FaHome } from 'react-icons/fa'
-import { BiMoney } from 'react-icons/bi'
+import { BiMoney, BiUserCircle } from 'react-icons/bi'
 import './App.css'
 import Router from './routes/Routes'
 import { getUserFromStorage } from './_services/user.service'
 
 function App() {
-  const [user, setUser] = useState(null)
+  const [user, setUser] = useState(getUserFromStorage())
   useEffect(() => {
     setUser(getUserFromStorage())
   }, [])
+  console.log('user',user)
   return (
     <div className="App">
       <Router />
       {user && (
-        <div className="fixed lg:hidden bottom-0 p-4 bg-gray-100 text-gray-900 w-full shadow-md">
+        <div className="fixed lg:hidden bottom-0  p-4 bg-indigo-900 text-gray-100 w-full  shadow-inner">
           <div className="flex justify-around text-4xl">
             <a href="/home">
               <FaHome />
@@ -25,6 +26,9 @@ function App() {
 
             <a href="/withdraw">
               <BiMoney />
+            </a>
+            <a href="/user">
+              <BiUserCircle />
             </a>
           </div>
         </div>

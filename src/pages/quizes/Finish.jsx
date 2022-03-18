@@ -7,11 +7,11 @@ const ChampionFinish = () => {
   const [info, setInfo] = useState(getInfo())
 
   return (
-    <div className="bg-primary text-white h-screen flex flex-col items-center justify-center">
-      <h1 className="text-8xl font-bold">Congratulations </h1>
+    <div className="bg-indigo-900 text-white h-screen flex flex-col items-center justify-center">
+      <h1 className="text-8xl font-bold my-4">Congratulations </h1>
       <h4>You finished all this week quata</h4>
       <p className="text-3xl text-blue-100">
-        You collect  {info.championsPt}
+        You Earn <b className='text-5xl'>{info.championsPt} </b>pts
       </p>
       <Link to="/home" className="my-4">
         <Button variant="secondary" pill={true} size="extra">
