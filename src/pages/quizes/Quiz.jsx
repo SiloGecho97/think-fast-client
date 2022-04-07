@@ -8,12 +8,12 @@ import { getInfo } from '../../_services/user.service'
 
 const Quiz = () => {
   const navigate = useNavigate()
-  const [info, setInfo] = useState(getInfo())
+  const [info] = useState(getInfo())
 
   const playChampions = () => {
     navigate('/quiz/play')
   }
-  
+
   return (
     <>
       <Header />
@@ -109,10 +109,15 @@ const Quiz = () => {
           <div className="modal-box">
             <h3 className="font-bold text-lg">Win this Week Champions</h3>
             <p className="py-4">
-              Answer all the questions, Be this week top 3 finish all the question.
+              Answer all the questions, Be this week top 3 finish all the
+              question.
             </p>
             <div className="modal-action">
-              <label for="my-modal" className="btn" onClick={(e)=>playChampions()}>
+              <label
+                for="my-modal"
+                className="btn"
+                onClick={(e) => playChampions()}
+              >
                 Ok!
               </label>
             </div>

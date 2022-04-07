@@ -1,5 +1,4 @@
 import React, { useState } from 'react'
-import { useNavigate } from 'react-router-dom'
 import Timer from '../../components/Games/Timer'
 import Header from '../../partials/Header'
 
@@ -127,28 +126,29 @@ const ChampionsPlay = () => {
   const [question] = useState(trailQuestions)
   const [selected, setSelected] = useState(null)
   const [showAnswer, setshowAnswer] = useState(false)
-  let i=1
-  let division=0
+  let i = 1
+  let division = 0
   let list = []
 
-  const selectAnswer = (index)=>{
+  const selectAnswer = (index) => {
     setshowAnswer(true)
-    if(selected===null){setSelected(index)}
+    if (selected === null) {
+      setSelected(index)
+    }
   }
   const nextQuestions = () => {
     setshowAnswer(false)
     setSelected(null)
     setCurrent(current + 1)
-    if (current === MAX_Q % 10 ) {
-      list=[]
-      division=division+10
+    if (current === MAX_Q % 10) {
+      list = []
+      division = division + 10
       return
     }
   }
 
-  for (i; i<division+10 && i<MAX_Q;i++) {
-    list.push(<li class={`step ${current >= i && 'step-primary'}`}>{i}</li>
-    )
+  for (i; i < division + 10 && i < MAX_Q; i++) {
+    list.push(<li class={`step ${current >= i && 'step-primary'}`}>{i}</li>)
   }
 
   return (
@@ -156,9 +156,7 @@ const ChampionsPlay = () => {
       <Header />
 
       <div className="mt-20 mx-auto flex w-full justify-center">
-        <ul className="steps">
-          {list}
-        </ul>
+        <ul className="steps">{list}</ul>
       </div>
       <div className="px-16 -mt-8 flex justify-end ">
         <Timer />
@@ -176,11 +174,22 @@ const ChampionsPlay = () => {
                 className={`rounded-full px-10 p-3 m-4 border border-indigo-100  ${
                   selected !== index
                     ? ''
-                   : choice===question[current].answer  ? 'bg-lime-400'  : 'bg-red-700 text-white'  
-                } ${selected===null && 'cursor-pointer hover:border-indigo-700 hover:shadow-lg'}`}
+                    : choice === question[current].answer
+                    ? 'bg-lime-400'
+                    : 'bg-red-700 text-white'
+                } ${
+                  selected === null &&
+                  'cursor-pointer hover:border-indigo-700 hover:shadow-lg'
+                }`}
               >
-                {choice} {showAnswer && choice===question[current].answer && <span className='bg-green-800 py-1 mx-4 text-white px-4 rounded-md'> Correct! </span>}
-              </li> 
+                {choice}{' '}
+                {showAnswer && choice === question[current].answer && (
+                  <span className="bg-green-800 py-1 mx-4 text-white px-4 rounded-md">
+                    {' '}
+                    Correct!{' '}
+                  </span>
+                )}
+              </li>
             ))}
           </ul>
           <div onClick={(e) => nextQuestions()} className="float-right mx-auto">

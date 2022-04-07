@@ -137,7 +137,7 @@ const basic_questions = [
 const MAX_Q = 10
 const Play = () => {
   const navigate = useNavigate()
-  const [info, setInfo] = useState(()=>getInfo())
+  const [info] = useState(() => getInfo())
   const [current, setCurrent] = useState(0)
   const [question] = useState(basic_questions)
   const [selected, setSelected] = useState(null)
@@ -148,11 +148,11 @@ const Play = () => {
   console.log(incorrect)
   const selectAnswer = (index, choice) => {
     setshowAnswer(true)
-    if(selected !==null) return
+    if (selected !== null) return
     setSelected(index)
     if (choice !== question[current].answer) {
-      setIncorrect(incorrect+1)
-      if(incorrect >= 2){
+      setIncorrect(incorrect + 1)
+      if (incorrect >= 2) {
         navigate('/games/failed')
       }
     }
@@ -168,9 +168,12 @@ const Play = () => {
     }
     console.log(info)
 
-    
-    if(current === MAX_Q){
-      setToLocalStorage({...info,today:info.today+20,week:info.week+20})
+    if (current === MAX_Q) {
+      setToLocalStorage({
+        ...info,
+        today: info.today + 20,
+        week: info.week + 20,
+      })
       navigate('/games/finish')
     }
   }
