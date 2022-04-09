@@ -23,6 +23,10 @@ function App() {
   }, [])
 
   const installApp = () => {
+    if (!defferedPrompt) {
+      console.log('prompt event is not intiatied')
+      return
+    }
     defferedPrompt.prompt()
 
     defferedPrompt.userChoice.then((choice) => {
