@@ -7,10 +7,35 @@ import { getUserFromStorage } from './_services/user.service'
 
 function App() {
   const [user, setUser] = useState(getUserFromStorage())
+  const [defferedPrompt, setDefferedPrompt] = useState(null)
+  useEffect(() => {
+    const addbtn = document.querySelector('.btn')
+
+    const handleBeforePrompt = (event) => {
+      event.preventDefault()
+      setDefferedPrompt(event)
+      addbtn.style.display = 'block'
+    }
+    window.addEventListener('beforeinstallprompt', handleBeforePrompt)
+    return () => {
+      window.removeEventListener('beforeinstallprompt', handleBeforePrompt)
+    }
+  }, [])
+
+  const installApp = () => {
+    defferedPrompt.prompt()
+
+    defferedPrompt.userChoice.then((choice) => {
+      if (choice.outcome === 'accepted') {
+        console.log('user accepted the prompt')
+      }
+      setDefferedPrompt(null)
+    })
+  }
+
   useEffect(() => {
     setUser(getUserFromStorage())
   }, [])
-  console.log('user',user)
   return (
     <div className="App">
       <Router />
@@ -33,6 +58,35 @@ function App() {
           </div>
         </div>
       )}
+
+      <section className="mx-auto w-full flex justify-center my-16">
+        <label for="my-modal" className="btn btn-primary btn-lg btn-wide ">
+          Install
+        </label>
+
+        <input type="checkbox" id="my-modal" className="modal-toggle" />
+        <div className="modal">
+          <div className="modal-box">
+            <h3 className="font-bold text-lg">Install as Application</h3>
+            <p className="py-4">
+              Inorder to easily access this web, install the application to you
+              mobile.
+            </p>
+            <div className="modal-action">
+              <label for="my-modal" className="btn">
+                Cancel
+              </label>
+              <label
+                for="my-modal"
+                className="btn"
+                onClick={(e) => installApp()}
+              >
+                Ok!
+              </label>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   )
 }
