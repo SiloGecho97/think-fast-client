@@ -137,7 +137,8 @@
   //   }
   // }
 
-  let deferredPrompt
+  // eslint-disable-next-line no-unused-vars
+  let deferredPrompt = null
 
   window.addEventListener('beforeinstallprompt', (e) => {
     e.preventDefault()
