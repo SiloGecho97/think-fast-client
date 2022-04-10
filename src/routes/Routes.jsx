@@ -20,6 +20,7 @@ import ChampionsPlay from '../pages/quizes/Play'
 import Withdraw from '../pages/Withdraw'
 import ChampionFinish from '../pages/quizes/Finish'
 import FailedAnswer from '../pages/Games/Failed'
+import Profile from '../pages/Profile/Profile'
 // import PrivateRoute from './PrivateRoute'
 
 const Router = () => {
@@ -34,6 +35,7 @@ const Router = () => {
           <Route path="/forgot" element={<ForgotPassword />} />
           <Route path="/verify" element={<VerifyPhone />} />
           <Route path="/home" element={<Home />} />
+          <Route path="/profile" element={<Profile />} />
           <Route path="/quiz" element={<Quiz />} />
           <Route path="/quiz/play" element={<ChampionsPlay />} />
           <Route path="/quiz/finish" element={<ChampionFinish />} />
