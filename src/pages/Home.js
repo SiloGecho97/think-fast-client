@@ -9,9 +9,9 @@ const Home = () => {
   const [info, setInfo] = useState({})
   useEffect(() => {
     // setUser(getFromLocalStorage())
-    setInfo(()=>getFromLocalStorage())
+    setInfo(() => getFromLocalStorage())
   }, [])
-  
+
   const navigate = useNavigate()
   const logout = () => {
     localStorage.removeItem('user')
@@ -49,9 +49,10 @@ const Home = () => {
           <div className="rounded-3xl w-full lg:h-76 p-8">
             <h2 className="font-bold text-white text-6xl">Play Game</h2>
             <p className="my-3 max-w-md text-gray-200">
-              Play Game as much as you can, earn points. Inorder to play games you need to 
-              select category first, you have to answer atleast three question to pass the next round. 
-              if you finish all the round of one category, you will collect points.
+              Play Game as much as you can, earn points. Inorder to play games
+              you need to select category first, you have to answer atleast
+              three question to pass the next round. if you finish all the round
+              of one category, you will collect points.
             </p>
             <Link to="/games" className="btn btn-outline btn-accent ">
               Play
@@ -59,7 +60,7 @@ const Home = () => {
           </div>
         </section>
         {/* this week champions */}
-        <section className="bg-gray-50  flex flex-col lg:flex-row items-baseline w-full px-8 ">
+        <section className="bg-gray-50 dark:bg-gray-800  flex flex-col lg:flex-row items-baseline w-full px-8 ">
           <Leadboard />
           <div className="w-full p-8">
             <h3 className="leading-[120%]">
@@ -68,8 +69,9 @@ const Home = () => {
               Quiz
             </h3>
             <p className="my-3 max-w-md text-gray-900">
-              Compete with other to win Weekly Champions. Inorder to win you have to answer all 50 questions.
-              Top 3 of the leadboard will win the price. 
+              Compete with other to win Weekly Champions. Inorder to win you
+              have to answer all 50 questions. Top 3 of the leadboard will win
+              the price.
             </p>
             <Link to="/quiz" className="btn-primary-large my-8 w-max block">
               Get Start
@@ -126,7 +128,9 @@ const Home = () => {
               <span className="p-2 bg-indigo-900 rounded text-white">
                 <FaDollarSign className="" />
               </span>
-              <span className="font-bold text-primary ">{info.championsPt}pts</span>
+              <span className="font-bold text-primary ">
+                {info.championsPt}pts
+              </span>
             </div>
           </div>
           <div className="mb-4">
@@ -141,7 +145,10 @@ const Home = () => {
               <span className="p-2 bg-green-900 rounded text-white">
                 <FaSortNumericUp className="" />
               </span>
-              <span className="font-bold text-green-700 "> {info.week2}pts</span>
+              <span className="font-bold text-green-700 ">
+                {' '}
+                {info.week2}pts
+              </span>
             </div>
           </div>
         </div>

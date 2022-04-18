@@ -78,8 +78,8 @@ const FinishTrial = () => {
                 placeholder-purpleGray-300
                 text-purpleGray-600
                 relative
-                bg-white
-                rounded
+                bg-white dark:bg-gray-800
+                rounded 
                 text-sm
                 border-0
                 shadow

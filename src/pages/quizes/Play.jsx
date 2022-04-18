@@ -2,7 +2,7 @@ import React, { useState } from 'react'
 import { useNavigate } from 'react-router-dom'
 import Timer from '../../components/Games/Timer'
 import Header from '../../partials/Header'
-import {  getInfo, setToLocalStorage } from '../../_services/user.service'
+import { getInfo, setToLocalStorage } from '../../_services/user.service'
 
 const trailQuestions = [
   {
@@ -50,7 +50,7 @@ const trailQuestions = [
     choices: ['999', '1000', '9999', '9000'],
     answer: '9999',
   },
-  
+
   {
     question: '1 mL is equal to how many grams?',
     choices: ['100 ml', '1000 ml', '10 ml', '10000 ml'],
@@ -140,15 +140,12 @@ const trailQuestions = [
   },
 ]
 
-const step = (current,start,end,list) => {
-  let i=start
-  for (i; i<=end;i++) {
-    list.push(<li class={`step ${current >= i && 'step-primary'}`}>{i}</li>
-    )
+const step = (current, start, end, list) => {
+  let i = start
+  for (i; i <= end; i++) {
+    list.push(<li className={`step ${current >= i && 'step-primary'}`}>{i}</li>)
   }
-  return (
-    list
-  )
+  return list
 }
 const ChampionsPlay = () => {
   const navigate = useNavigate()
@@ -157,63 +154,71 @@ const ChampionsPlay = () => {
   const [selected, setSelected] = useState(null)
   const [showAnswer, setshowAnswer] = useState(false)
   const [info, setInfo] = useState(getInfo())
-  const [end,setEnd] = useState(10)
-  const [start,setStart] = useState(1)
+  const [end, setEnd] = useState(10)
+  const [start, setStart] = useState(1)
 
-
-  const selectAnswer = (index)=>{
+  const selectAnswer = (index) => {
     setshowAnswer(true)
-    if(selected===null){setSelected(index)}
+    if (selected === null) {
+      setSelected(index)
+    }
   }
 
   const nextQuestions = () => {
     setshowAnswer(false)
     setSelected(null)
     setCurrent(current + 1)
-    setInfo({...info,championsPt:info.championsPt+10})
+    setInfo({ ...info, championsPt: info.championsPt + 10 })
     setToLocalStorage(info)
-    if(current===question.length-1){
+    if (current === question.length - 1) {
       navigate('/quiz/finish')
       return
     }
-    if (current === end ) {
+    if (current === end) {
       setStart(end)
-      setEnd(end+10)
+      setEnd(end + 10)
     }
   }
 
-  
-
   return (
-    <div className="bg-gray-50 pb-40">
+    <div className="bg-gray-50 dark:bg-gray-800 pb-40">
       <Header />
 
       <div className="mt-20 mx-auto flex w-full justify-center">
-        <ul className="steps">
-          {step(current,start,end,[])}
-        </ul>
+        <ul className="steps">{step(current, start, end, [])}</ul>
       </div>
-      <div className="px-16 -mt-8 flex justify-end ">
+      <div className="px-16 my-4 md:-mt-8 flex justify-end ">
         <Timer />
       </div>
       <div className="mx-auto w-full flex flex-col items-center my-0">
-        <div className="card max-w-4xl w-full p-16">
+        <div className="card max-w-4xl w-full md:p-16 py-4">
           <p className="text-2xl font-bold text-center">
             {question[current].question}
           </p>
-          <ul className="m-6 max-w-[480px] mx-auto w-full">
+          <ul className="md:m-6 max-w-[480px] mx-auto w-full">
             {question[current].choices.map((choice, index) => (
               <li
                 onClick={(e) => selectAnswer(index)}
                 key={index}
-                className={`rounded-full px-10 p-3 m-4 border border-indigo-100  ${
+                className={`rounded-full px-10 p-3 m-1 sm:m-4 border border-indigo-100  ${
                   selected !== index
                     ? ''
-                   : choice===question[current].answer  ? 'bg-lime-400'  : 'bg-red-700 text-white'  
-                } ${selected===null && 'cursor-pointer hover:border-indigo-700 hover:shadow-lg'}`}
+                    : choice === question[current].answer
+                    ? 'bg-lime-400'
+                    : 'bg-red-700 text-white'
+                } ${
+                  selected === null &&
+                  'cursor-pointer hover:border-indigo-700 hover:shadow-lg'
+                }`}
               >
-                {choice} {showAnswer && choice===question[current].answer && <span className='bg-green-800 py-1 mx-4 text-white px-4 rounded-md'> Correct! </span>}
-              </li> 
+                {choice}{' '}
+                {showAnswer && choice === question[current].answer && (
+                  <span className="bg-green-800 py-1 mx-4 text-white px-4 rounded-md">
+                    {' '}
+                    Correct!{' '}
+                  </span>
+                )}
+              </li>
             ))}
           </ul>
           <div onClick={(e) => nextQuestions()} className="float-right mx-auto">

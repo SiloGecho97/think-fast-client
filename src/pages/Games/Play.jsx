@@ -181,11 +181,11 @@ const Play = () => {
   const list = []
 
   for (i; i <= round * 5; i++) {
-    list.push(<li class={`step ${current >= i && 'step-primary'}`}>{i}</li>)
+    list.push(<li className={`step ${current >= i && 'step-primary'}`}>{i}</li>)
   }
 
   return (
-    <div className="bg-gray-50 pb-40">
+    <div className="bg-gray-50 dark:bg-gray-700 pb-40">
       <Header />
 
       <div className="mt-20 mx-auto flex w-full justify-center">

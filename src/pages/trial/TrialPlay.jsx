@@ -148,11 +148,11 @@ const ChampionsPlay = () => {
   }
 
   for (i; i < division + 10 && i < MAX_Q; i++) {
-    list.push(<li class={`step ${current >= i && 'step-primary'}`}>{i}</li>)
+    list.push(<li className={`step ${current >= i && 'step-primary'}`}>{i}</li>)
   }
 
   return (
-    <div className="bg-gray-50 pb-40">
+    <div className="bg-gray-50 dark:bg-gray-800 pb-40">
       <Header />
 
       <div className="mt-20 mx-auto flex w-full justify-center">
