@@ -195,7 +195,7 @@ const ChampionsPlay = () => {
           <p className="text-2xl font-bold text-center">
             {question[current].question}
           </p>
-          <ul className="md:m-6 max-w-[480px] mx-auto w-full">
+          <ul className="max-w-[480px] block md:mx-auto w-full">
             {question[current].choices.map((choice, index) => (
               <li
                 onClick={(e) => selectAnswer(index)}
